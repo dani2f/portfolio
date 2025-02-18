@@ -15,6 +15,10 @@ export default {
 			blur: {
 				"50px": "50px", // Desenfoque de 50px
 			},
+			boxShadow: {
+				'special': 'inset 0 2px 2px 0px rgba(255, 255, 255, 0.2)',
+				'technologies': 'inset 0 2px 2px 0px rgba(255, 255, 255, 0.2), 0 0px 15px rgba(0, 0, 0, 0.3)',
+			},
 		},
 	},
 	plugins: [],
