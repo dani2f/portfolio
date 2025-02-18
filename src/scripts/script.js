@@ -269,7 +269,6 @@ const projects = {
 			skillContainer.classList.add("flex", "flex-row", "flex-wrap", "gap-4", "p-[2%]", "py-[0]", "lg:p-[7%]");
   
 			projectData.skills.forEach((skill) => {
-				console.log(skill)
 			  const card = createSkillCard(skill);
 			  skillContainer.appendChild(card);
 			});
