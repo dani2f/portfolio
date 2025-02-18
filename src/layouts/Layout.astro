@@ -7,28 +7,59 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link
 			rel="icon"
-			type="image/svg+xml"
-			href="/img/logos/logoDaniel.svg"
+			type="image/png"
+			href="https://tudominio.com/img/logos/logoDaniel.png"
+		/>
+
+		<!-- SEO Meta Tags -->
+		<meta
+			name="description"
+			content="Desarrollador Full Stack en Bilbao con experiencia en JavaScript, Laravel y Astro.js. Creando experiencias digitales modernas y optimizadas."
 		/>
 		<meta
 			name="keywords"
-			content="Daniel Gomez,Desarrollador Frontend,frontend,Desarrollador,JavaScript,React.js, Astro.js"
+			content="Desarrollador Full Stack, Frontend, Backend, JavaScript, React.js, Astro.js, Bilbao, Desarrollo Web"
 		/>
+		<meta name="author" content="Daniel Gómez" />
+
+		<!-- Open Graph Meta Tags (para compartir en redes) -->
 		<meta
 			property="og:title"
 			content="Daniel Gómez - Desarrollador Full Stack"
 		/>
-		<meta property="og:image" content="/img/logos/logoDaniel.svg" />
 		<meta
 			property="og:description"
+			content="Desarrollador Full Stack con pasión por la tecnología y el crecimiento profesional."
+		/>
+		<meta
+			property="og:image"
+			content="https://tudominio.com/img/logos/logoDaniel.png"
+		/>
+		<meta property="og:url" content="https://tudominio.com" />
+		<meta property="og:type" content="website" />
+
+		<!-- Twitter Card (para mejorar en Twitter/X) -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta
+			name="twitter:title"
+			content="Daniel Gómez - Desarrollador Full Stack"
+		/>
+		<meta
+			name="twitter:description"
 			content="Desarrollador con pasión por construir y seguir creciendo en el mundo del desarrollo web."
 		/>
-		<meta name="generator" content={Astro.generator} />
-		<title>Daniel Gómez - Portfolio</title>
+		<meta
+			name="twitter:image"
+			content="https://danielgomezportfolio.vercel.app/img/logos/logoDaniel.png"
+		/>
+
+		<meta name="generator" content="Astro" />
+		<title>Daniel Gómez - Desarrollador Full Stack</title>
 	</head>
+
 	<body class="pattern flex flex-col items-center w-full">
 		<slot />
 		<!-- Tu script con la lógica -->
