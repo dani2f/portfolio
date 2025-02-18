@@ -9,17 +9,24 @@ import "../styles/styles.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-                <meta name="color-scheme" content="light">
+		<meta name="color-scheme" content="light" />
 		<title>Astro Basics</title>
 	</head>
 	<body class="pattern flex flex-col items-center w-full">
 		<slot />
-<script>
-  if (window.matchMedia("(forced-colors: active)").matches || window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    document.documentElement.style.backgroundColor = "white";
-    document.documentElement.style.color = "black";
-  }
-</script>
+		<script>
+			if (
+				window.matchMedia("(forced-colors: active)").matches ||
+				window.matchMedia("(prefers-color-scheme: dark)").matches
+			) {
+				document.documentElement.style.backgroundColor = "white";
+				document.documentElement.style.color = "black";
+			}
+
+			setTimeout(() => {
+				document.body.style.backgroundColor = "#ffffff";
+			}, 100);
+		</script>
 	</body>
 </html>
 <style>
