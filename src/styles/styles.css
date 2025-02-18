@@ -1,0 +1,327 @@
+@font-face {
+	font-family: "Petit Formal Script";
+	src: url("/fonts/PetitFormalScript-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Onest";
+	src: url("/fonts/Onest-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+	/*colors*/
+	--main-background-color: #1b2228;
+	--original-color: #e4c867;
+	--main-char-color: #e5e5e5;
+	--second-char-color: #b2b5b7;
+	--second-background-color: #2e3a44;
+
+	/*Fonts*/
+	--special-font: "Petit Formal Script";
+	--standard-font: "Onest";
+}
+
+.second-color-opacity {
+	background-color: rgb(46, 58, 68, 0.4);
+}
+
+/* Estilo del scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+	/* Ancho del scroll */
+}
+
+/* Color del fondo del scrollbar */
+::-webkit-scrollbar-track {
+	background: var(--second-background-color);
+	border-radius: 10px;
+}
+
+/* Color del "thumb" (la parte que se mueve) */
+::-webkit-scrollbar-thumb {
+	background: #ccc;
+	border-radius: 10px;
+}
+
+/* Cambiar el color al pasar el mouse */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+
+html,
+body {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	font-family: var(--standard-font);
+	color: var(--main-char-color);
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.pattern {
+	--color: rgba(46, 58, 68, 0.5);
+	background-color: var(--main-background-color);
+	background-image:
+		linear-gradient(0deg,
+			transparent 24%,
+			var(--color) 25%,
+			var(--color) 26%,
+			transparent 27%,
+			transparent 74%,
+			var(--color) 75%,
+			var(--color) 76%,
+			transparent 77%,
+			transparent),
+		linear-gradient(90deg,
+			transparent 24%,
+			var(--color) 25%,
+			var(--color) 26%,
+			transparent 27%,
+			transparent 74%,
+			var(--color) 75%,
+			var(--color) 76%,
+			transparent 77%,
+			transparent);
+	background-size: 15px 15px;
+}
+
+/*burger*/
+
+.buttons__burger {
+	--size: 2rem;
+	--clr: var(--main-char-color);
+	width: var(--size);
+	height: calc(0.7 * var(--size));
+	cursor: pointer;
+	position: relative;
+}
+
+.buttons__burger #burger {
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+.buttons__burger span {
+	display: block;
+	position: absolute;
+	width: 90%;
+	border-radius: 0.5rem;
+	border: 1px solid var(--clr);
+	background-color: var(--clr);
+	transition: 0.15s ease-in-out;
+}
+
+.buttons__burger span:nth-of-type(1) {
+	top: 0;
+	right: 0;
+	transform-origin: right center;
+}
+
+.buttons__burger span:nth-of-type(2) {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.buttons__burger span:nth-of-type(3) {
+	top: 100%;
+	right: 0;
+	transform-origin: right center;
+	transform: translateY(-100%);
+}
+
+.buttons__burger #burger:checked~span:nth-of-type(1) {
+	transform: translateY(-30%) rotate(40deg);
+	width: 50%;
+	top: 50%;
+}
+
+.buttons__burger #burger:checked~span:nth-of-type(3) {
+	transform: translateY(-70%) rotate(-40deg);
+	width: 50%;
+	top: 50%;
+}
+
+
+#all-grid {
+	position: relative;
+}
+
+@keyframes expandAnimation {
+	0% {
+		top: var(--start-top);
+		left: var(--start-left);
+		width: var(--start-width);
+		height: var(--start-height);
+	}
+
+	50% {
+		left: 0;
+		top: var(--start-top);
+		width: 100%;
+		height: var(--start-height);
+	}
+
+	100% {
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+
+/*buton hover*/
+
+.box {
+
+	height: auto;
+	float: left;
+	transition: .5s linear;
+	position: relative;
+	/* display: block; */
+	overflow: hidden;
+}
+
+.box:before {
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: 0;
+	height: 4px;
+	width: 100%;
+	border-bottom: 1px solid transparent;
+	border-left: 1px solid transparent;
+	box-sizing: border-box;
+	transform: translateX(100%);
+	z-index: 999;
+	border-radius: 0.25rem;
+}
+
+.box:hover {
+	box-shadow: 0 0px 10px var(--original-color);
+}
+
+.box:after {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	border-top: 1px solid transparent;
+	border-right: 1px solid transparent;
+	box-sizing: border-box;
+	transform: translateX(-100%);
+	z-index: 999;
+	border-radius: 0.25rem;
+}
+
+
+
+.box:hover:before {
+	border-color: var(--original-color);
+	height: 100%;
+	transform: translateX(0);
+	transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+	border-color: var(--original-color);
+	height: 100%;
+	transform: translateX(0);
+	transition: .3s transform linear, .3s height linear .5s;
+}
+
+.shadow-technologies {
+	box-shadow:
+		inset 0 2px 2px 0px rgba(255, 255, 255, 0.2),
+		0 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+/* Tooltip: caja */
+.tooltip::before {
+	content: "Javascript";
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	background-color: var(--second-background-color);
+	color: var(--main-char-color);
+	font-size: 1rem;
+	font-weight: 200;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+	white-space: nowrap;
+	opacity: 0;
+	pointer-events: none;
+	width: 6rem;
+	height: 3rem;
+	bottom: 120%;
+	left: 50%;
+	z-index: 10;
+	/* Posición arriba del elemento */
+
+	transform: translateX(-50%) translateY(0.5rem);
+	/* Empuja hacia abajo al inicio */
+
+
+
+
+
+
+
+	transition: opacity 0.3s ease, transform 0.3s ease;
+
+
+}
+
+/* Tooltip: flecha o pico */
+.tooltip::after {
+	content: "";
+	position: absolute;
+	border-color: var(--second-background-color) transparent transparent transparent;
+	bottom: 100%;
+	opacity: 0;
+	pointer-events: none;
+	left: 50%;
+	border-width: 0.5rem;
+	transform: translateX(-50%);
+	z-index: 10;
+
+
+	border-style: solid;
+
+
+
+	transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+/* Al hacer hover, aparece el tooltip y la flecha */
+.tooltip:hover::before {
+	opacity: 1;
+	transform: translateX(-50%) translateY(0);
+	/* Vuelve a su posición final */
+}
+
+.tooltip:hover::after {
+	opacity: 1;
+	transform: translateX(-50%) translateY(0);
+}
+
+.active-section {
+	font-weight: bold;
+	color: var(--original-color);
+}

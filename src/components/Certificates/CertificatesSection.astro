@@ -1,0 +1,45 @@
+---
+import SkillCard from "../Card/SkillCard.astro";
+import Dropdown from "./Dropdown.astro";
+---
+
+<section
+	id="certificatesSection"
+	class="w-full flex flex-col justify-center items-center gap-4 mb-[20rem]">
+	<h2
+		class="text-5xl sm:text-[3.7rem] md:text-[5rem] lg:text-[6.3rem] xl:text-[7.3rem]
+    2xl:text-[8rem] text-[var(--original-color)] font-special z-20 mb-8">
+		<!-- mb-[-1.7rem] sm:mb-[-1.9rem] md:mb-[-2.3rem] xl:mb-[-2.65rem] 2xl:mb-[-2.9rem] -->
+		Certificados
+	</h2>
+
+	<article>
+		<Dropdown
+			link="../../../src/assets/certificates/cursoAngular.pdf"
+			id="1"
+			name="Curso de Angular"
+			certificateId="99232 1212 1212"
+			date="2024"
+			where="Curso de Linkedin"
+			skillsTitle={["AngularJs", "Scrum", "Full Stack", "Github"]}
+		/>
+
+		<Dropdown
+			link="../../../src/assets/certificates/cursoCopilot.pdf"
+			id="2"
+			name="Curso de Copilot"
+			certificateId="OA-2025-0117000743929"
+			date="2025"
+			where="Santander Open Academy"
+			skillsTitle={["IA", "Copilot"]}
+		/>
+
+		<Dropdown
+			link="../../../src/assets/certificates/b2Euskera.pdf"
+			id="3"
+			name="Exención del B2 de Euskera"
+			date="2021"
+			where="Gobierno Vasco"
+		/>
+	</article>
+</section>

@@ -1,0 +1,85 @@
+---
+import HeaderOption from "./HeaderOption.astro";
+---
+
+<!-- Header principal -->
+<header
+	class="sticky w-full top-0 lg:top-5 bg-transparent backdrop-blur-lg text-white px-4 py-2 flex justify-between items-center lg:border-[0.5px] lg:w-[60rem] lg:rounded-[3rem] z-[9999] font-thin">
+	<!-- Menú de escritorio (visible en pantallas grandes) -->
+	<a class="text-3xl font-special lg:hidden" href="#frontPageSection">D</a>
+	<nav
+		class="hidden lg:flex flex-row items-center justify-between gap-[8rem] w-full">
+		<a class="text-3xl font-special" href="#frontPageSection">D</a>
+		<div>
+			<HeaderOption sectionName="proyectsSection">Proyectos</HeaderOption>
+			<HeaderOption sectionName="experienceSection"
+				>Experiencia</HeaderOption
+			>
+			<HeaderOption sectionName="technologiesSection"
+				>Tecnologías</HeaderOption
+			>
+			<HeaderOption sectionName="certificatesSection"
+				>Cértificados</HeaderOption
+			>
+		</div>
+
+		<div class="lg:flex flex-row items-center gap-[1rem]">
+			<a href="https://github.com/dani2f" target="_blank">
+				<img
+					src="../../../src/assets/icons/techIcons/Other/iconGithub.svg"
+					alt="Github logo"
+					class="w-10 h-10"
+				/>
+			</a>
+			<a href="https://github.com/dani2f" target="_blank">
+				<img
+					src="../../../src/assets/icons/iconLinkedin.svg"
+					alt="Github logo"
+					class="w-10 h-10"
+				/>
+			</a>
+		</div>
+	</nav>
+
+	<!-- Botón hamburguesa para móvil -->
+	<label
+		class="lg:hidden flex items-center buttons__burger z-[9999]"
+		for="burger">
+		<input type="checkbox" id="burger" />
+		<span></span>
+		<span></span>
+		<span></span>
+	</label>
+</header>
+
+<!-- Menú móvil -->
+<div
+	id="mobile-menu"
+	class="lg:hidden fixed inset-0 backdrop-blur-lg opacity-0 pointer-events-none transform transition-all duration-300 ease-in-out z-[9998]">
+	<nav
+		class="flex flex-col items-center justify-center space-y-4 h-full text-xl gap-3">
+		<HeaderOption sectionName="proyectsSection">Proyectos</HeaderOption>
+		<HeaderOption sectionName="experienceSection">Experiencia</HeaderOption>
+		<HeaderOption sectionName="technologiesSection"
+			>Tecnologías</HeaderOption
+		>
+		<HeaderOption sectionName="certificatesSection"
+			>Cértificados</HeaderOption
+		>
+	</nav>
+</div>
+
+<!-- Script para activar el menú -->
+<script>
+	const menuToggle = document.getElementById("burger");
+	const mobileMenu = document.getElementById("mobile-menu");
+	const header = document.querySelector("header");
+
+	menuToggle.addEventListener("click", () => {
+		header.classList.toggle("backdrop-blur-lg");
+		mobileMenu.classList.toggle("opacity-100");
+		mobileMenu.classList.toggle("pointer-events-auto");
+		mobileMenu.classList.toggle("opacity-0");
+		mobileMenu.classList.toggle("pointer-events-none");
+	});
+</script>

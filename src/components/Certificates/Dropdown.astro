@@ -1,0 +1,66 @@
+---
+import SkillCard from "../Card/SkillCard.astro";
+const { id, name, certificateId, date, link, skillsTitle, where } = Astro.props;
+
+// Aseguramos que skillsTitle es un array de strings
+const skillsTitleArray = Array.isArray(skillsTitle) ? skillsTitle : [];
+
+// Validar si se pasaron todos los parámetros requeridos
+const isValid = name && date && link && where;
+---
+
+<div
+	class={`w-[80vw] sm:w-[70vw] md:w-[80vw] lg:w-[60rem] ${!isValid ? "hidden" : ""}`}>
+	<!-- Encabezado clickeable -->
+	<div
+		id={id}
+		class="flex flex-row items-center justify-between gap-4 w-full rounded-t lg:rounded-t-lg shadow-technologies relative cursor-pointer second-color-opacity p-4 toggle-panel">
+		<h3
+			class="md:text-lg lg:text-2xl font-standard font-thin w-full text-[var(--second-char-color)]">
+			{name}
+		</h3>
+		<div class="flex flex-row items-center gap-4">
+			<a href={link} target="_blank" rel="noopener noreferrer">
+				<img
+					src="../../../src/assets/icons/iconCv.svg"
+					alt="Logo 1"
+					class="object-contain w-[7vw] sm:w-[5vw] md:w-[4vw] lg:w-[3vw] xl:w-[2vw]"
+				/>
+			</a>
+
+			<img
+				src="../../../src/assets/icons/iconArrow2.svg"
+				alt="Logo 1"
+				class="object-contain w-[5vw] sm:w-[4vw] md:w-[3vw] lg:w-[3vw] xl:w-[2vw]"
+			/>
+		</div>
+	</div>
+
+	<!-- Contenido desplegable con animación -->
+	<div
+		id="content-panel"
+		class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-[var(--second-background-color)] w-full px-4">
+		<div class="flex flex-col justify-center items-start w-full">
+			<div class="flex flex-row justify-between w-full">
+				<p
+					class=`text-[0.8rem] md:text-base font-light text-[var(--second-char-color)] ${!certificateId ? "hidden" : ""}  `>
+					ID: {certificateId}
+				</p>
+				<p
+					class="text-[0.8rem] md:text-base font-light text-[var(--second-char-color)]">
+					Fecha de obtención: {date}
+				</p>
+			</div>
+			<p class="font-light text-sm md:text-base">{where}</p>
+		</div>
+
+		<div class="flex flex-row items-center gap-4 mt-2">
+			{
+				skillsTitleArray &&
+					skillsTitleArray.map((skill, index) => (
+						<SkillCard key={index} title={skill} />
+					))
+			}
+		</div>
+	</div>
+</div>

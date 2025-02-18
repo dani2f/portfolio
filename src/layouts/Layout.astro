@@ -1,0 +1,29 @@
+---
+import "../styles/styles.css";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body class="pattern flex flex-col items-center w-full">
+		<slot />
+	</body>
+</html>
+<style>
+	#observer-debug {
+		position: fixed;
+		top: 20%;
+		bottom: 20%;
+		left: 0;
+		right: 0;
+		background: rgba(255, 0, 0, 0.2); /* Rojo semi-transparente */
+		pointer-events: none;
+		z-index: 9999;
+	}
+</style>

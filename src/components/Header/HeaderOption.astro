@@ -1,0 +1,10 @@
+---
+// Header.astro
+const { sectionName } = Astro.props;
+---
+
+<a
+	href={`#${sectionName}`}
+	class="hover:text-[var(--original-color)] px-4 py-2 rounded transition-all duration-[350ms] font-thin nav-link">
+	<slot />
+</a>

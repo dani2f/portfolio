@@ -1,0 +1,78 @@
+---
+const { title, src } = Astro.props;
+---
+
+<div
+	data-title={title}
+	class="tech-card flex flex-row items-center justify-center second-color-opacity w-[5.2rem] h-[5.2rem] rounded lg:rounded-lg shadow-technologies relative cursor-pointer
+         before:flex before:items-center before:justify-center before:absolute
+         before:bottom-[120%] before:left-1/2 before:-translate-x-1/2 before:translate-y-[0.5rem]
+         before:w-[6rem] before:h-[3rem] before:bg-[var(--second-background-color)] before:text-[var(--main-char-color)]
+         before:text-sm before:font-light before:p-2 before:rounded-lg before:shadow-lg before:whitespace-nowrap
+         before:opacity-0 before:pointer-events-none before:transition-all before:duration-300 before:ease-in-out
+         hover:before:opacity-100 hover:before:translate-y-0
+         after:content-[''] after:absolute after:bottom-full after:left-1/2 after:-translate-x-1/2
+         after:border-[0.5rem] after:border-solid after:border-t-[var(--second-background-color)]
+         after:border-r-transparent after:border-b-transparent after:border-l-transparent
+         after:opacity-0 after:pointer-events-none after:transition-all after:duration-300 after:ease-in-out
+         hover:after:opacity-100
+         before:content-[attr(data-title)]">
+	<img
+		src={src}
+		alt={`${title} icon`}
+		class="object-contain w-1/2 h-1/2 bell"
+	/>
+</div>
+
+<style>
+	/* From Uiverse.io by vinodjangid07 */
+	.tech-card {
+		position: relative;
+
+		transition-duration: 0.3s;
+	}
+
+	.bell path {
+		fill: white;
+	}
+
+	.button:hover {
+		background-color: rgb(56, 56, 56);
+	}
+
+	.tech-card:hover .bell {
+		animation: bellRing 0.9s both;
+	}
+
+	/* bell ringing animation keyframes*/
+	@keyframes bellRing {
+		0%,
+		100% {
+			transform-origin: top;
+		}
+
+		15% {
+			transform: rotateZ(10deg);
+		}
+
+		30% {
+			transform: rotateZ(-10deg);
+		}
+
+		45% {
+			transform: rotateZ(5deg);
+		}
+
+		60% {
+			transform: rotateZ(-5deg);
+		}
+
+		75% {
+			transform: rotateZ(2deg);
+		}
+	}
+
+	.tech-card:active {
+		transform: scale(0.8);
+	}
+</style>
