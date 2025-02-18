@@ -266,7 +266,7 @@ const projects = {
   
 			// Contenedor para las skill cards
 			const skillContainer = document.createElement("div");
-			skillContainer.classList.add("flex", "flex-row", "gap-4", "p-[2%]", "py-[0]", "lg:p-[7%]");
+			skillContainer.classList.add("flex", "flex-row", "flex-wrap", "gap-4", "p-[2%]", "py-[0]", "lg:p-[7%]");
   
 			projectData.skills.forEach((skill) => {
 				console.log(skill)
