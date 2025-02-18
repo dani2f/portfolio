@@ -118,6 +118,8 @@ const projects = {
 	setTimeout(()=>{
 		target.classList.add("box");
 	},"1000ms")
+
+	
 	  // Tomamos el ID del proyecto
 	  let projectId = null;
 	  if(target.getAttribute("id")){
