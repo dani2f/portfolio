@@ -16,6 +16,21 @@ const projects = {
 		  iconAlt: "HTML logo",
 		  text: "HTML",
 		},
+		{
+			iconSrc: "/img/icons/techIcons/frontend/iconCSS.svg",
+			iconAlt: "CSS logo",
+			text: "CSS",
+		},
+		{
+			iconSrc: "/img/icons/techIcons/frontend/iconReact.svg",
+			iconAlt: "React logo",
+			text: "React",
+		},
+		{
+			iconSrc: "/img/icons/techIcons/other/iconWordPress.svg",
+			iconAlt: "Wordpress logo",
+			text: "Wordpress",
+		},
 	  ],
 	},
 	proximamente: {
