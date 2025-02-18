@@ -1,6 +1,6 @@
 if (navigator.userAgent.includes("SamsungBrowser")) {
     document.getElementsByTagName("body")[0].style.backgroundColor = "#fff";
-  }
+}
 
 
 // 1. Objeto con la información de cada proyecto, indexado por ID
@@ -112,6 +112,12 @@ const projects = {
 	}
   
 	if (target.classList.contains("grid-box")) {
+	
+	
+	target.classList.remove("box");
+	setTimeout(()=>{
+		target.classList.add("box");
+	},"1000ms")
 	  // Tomamos el ID del proyecto
 	  let projectId = null;
 	  if(target.getAttribute("id")){
