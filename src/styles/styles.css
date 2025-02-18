@@ -60,6 +60,9 @@ body {
 	height: 100%;
 
 }
+html{
+	color-scheme: light only;
+}
 
 .pattern {
 	--color: rgba(46, 58, 68, 0.5);
