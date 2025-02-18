@@ -52,7 +52,7 @@
 html,
 body {
 	scroll-behavior: smooth;
-
+	overflow-x: hidden;
 	font-family: var(--standard-font);
 	color: var(--main-char-color);
 	margin: 0;
