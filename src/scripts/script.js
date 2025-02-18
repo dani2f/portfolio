@@ -113,13 +113,26 @@ const projects = {
   
 	if (target.classList.contains("grid-box")) {
 	
-	
+	//quitamos la clase que ahce la animacion de hover (para que en movil no se quede pillado), y luego la agregamos
 	target.classList.remove("box");
-	setTimeout(()=>{
-		target.classList.add("box");
-	},"1000ms")
 
+	// Función para volver a añadir la clase cuando el usuario toque otra parte de la pantalla
+	const restoreBox = () => {
+		setTimeout(() => {
+			target.classList.add("box");
+		}, 150);
 	
+		document.removeEventListener("touchstart", restoreBox); // Eliminamos el listener después de ejecutarlo
+		document.removeEventListener("click", restoreBox);
+	};
+	// Escuchamos el siguiente toque en la pantalla
+	document.addEventListener("touchstart", restoreBox);
+	document.addEventListener("click", restoreBox);
+
+
+
+
+
 	  // Tomamos el ID del proyecto
 	  let projectId = null;
 	  if(target.getAttribute("id")){
