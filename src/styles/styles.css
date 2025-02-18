@@ -61,22 +61,6 @@ body {
 
 }
 
-html {
-	color-scheme: light only;
-}
-
-html::before {
-	content: "";
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: white !important;
-	z-index: -1;
-}
-
-
 .pattern {
 	--color: rgba(46, 58, 68, 0.5);
 	background-color: var(--main-background-color);

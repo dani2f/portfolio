@@ -3,26 +3,20 @@ import "../styles/styles.css";
 ---
 
 <!doctype html>
-<html lang="en" class="light">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/img/logos/logoDaniel.svg"
+		/>
 		<meta name="generator" content={Astro.generator} />
-		<meta name="color-scheme" content="light" />
-		<title>Astro Basics</title>
+		<title>Daniel Gómez - Portfolio</title>
 	</head>
 	<body class="pattern flex flex-col items-center w-full">
 		<slot />
-		<script>
-			if (
-				window.matchMedia("(forced-colors: active)").matches ||
-				window.matchMedia("(prefers-color-scheme: dark)").matches
-			) {
-				document.documentElement.style.backgroundColor = "white";
-				document.documentElement.style.color = "black";
-			}
-		</script>
 	</body>
 </html>
 <style>

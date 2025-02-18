@@ -1,3 +1,8 @@
+if (navigator.userAgent.includes("SamsungBrowser")) {
+    document.getElementsByTagName("body")[0].style.backgroundColor = "#fff";
+  }
+
+
 // 1. Objeto con la información de cada proyecto, indexado por ID
 const projects = {
 	codigosa: {
