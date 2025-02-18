@@ -16,6 +16,7 @@ export default {
 				"50px": "50px", // Desenfoque de 50px
 			},
 			boxShadow: {
+				'custom': '0px 0px 9px 1px #0005', // Tu sombra personalizada
 				'special': 'inset 0 2px 2px 0px rgba(255, 255, 255, 0.2)',
 				'technologies': 'inset 0 2px 2px 0px rgba(255, 255, 255, 0.2), 0 0px 15px rgba(0, 0, 0, 0.3)',
 			},
