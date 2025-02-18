@@ -1,46 +1,46 @@
 // 1. Objeto con la información de cada proyecto, indexado por ID
 const projects = {
 	codigosa: {
-	  image: "../../../src/assets/proyects/codigosa.webp",
+	  image: "/img/proyects/codigosa.webp",
 	  name: "Codigosa",
 	  description:
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie...",
 	  skills: [
 		{
 		  href: "https://github.com/dani2f",
-		  iconSrc: "../../../src/assets/icons/techIcons/Other/iconGithub.svg",
+		  iconSrc: "/img/icons/techIcons/Other/iconGithub.svg",
 		  iconAlt: "Github logo",
 		  text: "JavaScript",
 		},
 		{
 		  href: "https://github.com/dani2f",
-		  iconSrc: "../../../src/assets/icons/techIcons/Other/iconGithub.svg",
+		  iconSrc: "/img/icons/techIcons/Other/iconGithub.svg",
 		  iconAlt: "Github logo",
 		  text: "TypeScript",
 		},
 	  ],
 	},
 	proximamente: {
-	  image: "../../../src/assets/proyects/proximamente1.webp",
+	  image: "/img/proyects/proximamente1.webp",
 	  name: "Proyecto Próximamente 1",
 	  description: "Este proyecto se encuentra en desarrollo...",
 	  comingSoon: true, // Marcamos que es un proyecto aún en desarrollo
 	  skills: [],
 	},
 	codigosa2: {
-	  image: "../../../src/assets/proyects/codigosa.webp",
+	  image: "/img/proyects/codigosa.webp",
 	  name: "Codigosa 2",
 	  description: "Una variante del proyecto Codigosa...",
 	  skills: [],
 	},
 	codigosa3: {
-	  image: "../../../src/assets/proyects/codigosa.webp",
+	  image: "/img/proyects/codigosa.webp",
 	  name: "Codigosa 3",
 	  description: "Otra variante del proyecto Codigosa...",
 	  skills: [],
 	},
 	bilbaoskp: {
-	  image: "../../../src/assets/proyects/bilbaoskp.webp",
+	  image: "/img/proyects/bilbaoskp.webp",
 	  name: "BilbaoSKP",
 	  description:
 		"Proyecto sobre BilbaoSKP con X características y Y funcionalidades...",
@@ -177,7 +177,7 @@ const projects = {
   
 			// Icono (la ruta la colocarás tú)
 			const comingSoonIcon = document.createElement("img");
-			comingSoonIcon.src = "../../../src/assets/icons/iconSoon.webp"; // Actualiza la ruta según corresponda
+			comingSoonIcon.src = "/img/icons/iconSoon.webp"; // Actualiza la ruta según corresponda
 			comingSoonIcon.alt = "Próximamente";
 			comingSoonIcon.classList.add("w-[5rem]", "h-[5rem]","lg:w-[10rem]", "lg:h-[10rem]"); // Puedes ajustar el tamaño
   
@@ -277,7 +277,7 @@ const projects = {
   
 		  // Botón de cierre
 		  const closeButton = document.createElement("img");
-		  closeButton.src = "../../../src/assets/icons/iconClose.svg";
+		  closeButton.src = "/img/icons/iconClose.svg";
 		  closeButton.classList.add("text-white", "absolute", "w-[5%]","md:w-[4%]" ,"lg:w-[3%]","2xl:w-[2%]", "top-5", "right-5", "cursor-pointer", "z-10", "opacity-0", "transition-opacity", "duration-300", "ease-in-out");
 		  closeButton.alt = "Cerrar";
 
