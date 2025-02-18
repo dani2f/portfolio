@@ -7,16 +7,14 @@ const projects = {
 		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie...",
 	  skills: [
 		{
-		  href: "https://github.com/dani2f",
-		  iconSrc: "/img/icons/techIcons/Other/iconGithub.svg",
-		  iconAlt: "Github logo",
+		  iconSrc: "/img/icons/techIcons/frontend/iconJavaScript.svg",
+		  iconAlt: "JavaScript logo",
 		  text: "JavaScript",
 		},
 		{
-		  href: "https://github.com/dani2f",
-		  iconSrc: "/img/icons/techIcons/Other/iconGithub.svg",
-		  iconAlt: "Github logo",
-		  text: "TypeScript",
+		  iconSrc: "/img/icons/techIcons/frontend/iconHTML5.svg",
+		  iconAlt: "HTML logo",
+		  text: "HTML",
 		},
 	  ],
 	},
