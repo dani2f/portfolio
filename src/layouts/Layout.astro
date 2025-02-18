@@ -1,5 +1,6 @@
 ---
 import "../styles/styles.css";
+import SpeedInsights from "@vercel/speed-insights/astro";
 ---
 
 <!doctype html>
@@ -18,6 +19,7 @@ import "../styles/styles.css";
 	<body class="pattern flex flex-col items-center w-full">
 		<slot />
 		<!-- Tu script con la lógica -->
+		<SpeedInsights />
 		<script src="/src/scripts/script.js"></script>
 	</body>
 </html>
