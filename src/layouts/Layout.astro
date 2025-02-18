@@ -17,9 +17,10 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 		<title>Daniel Gómez - Portfolio</title>
 	</head>
 	<body class="pattern flex flex-col items-center w-full">
+		<SpeedInsights />
 		<slot />
 		<!-- Tu script con la lógica -->
-		<SpeedInsights />
+
 		<script src="/src/scripts/script.js"></script>
 	</body>
 </html>
