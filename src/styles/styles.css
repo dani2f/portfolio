@@ -329,3 +329,13 @@ html{
 	font-weight: bold;
 	color: var(--original-color);
 }
+
+
+html, body {
+  background-color: white !important;
+  color: black !important;
+}
+
+img, video, iframe {
+  filter: none !important;
+}
