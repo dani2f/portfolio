@@ -7,7 +7,9 @@ import SkillCard from "../Card/SkillCard.astro";
 	class="w-full flex flex-col justify-center items-center gap-4 mb-[5rem]">
 	<h2
 		class="text-5xl sm:text-[3.7rem] md:text-[5rem] lg:text-[6.3rem] xl:text-[7.3rem]
-    2xl:text-[8rem] text-[var(--original-color)] font-special z-20 mb-[-1.7rem] sm:mb-[-1.9rem] md:mb-[-2.3rem] xl:mb-[-2.65rem] 2xl:mb-[-2.9rem]">
+    2xl:text-[8rem] text-[var(--original-color)] font-special z-20 mb-[-1.7rem] sm:mb-[-1.9rem] md:mb-[-2.3rem] xl:mb-[-2.65rem] 2xl:mb-[-2.9rem]
+	fade-up"
+		data-animate>
 		Proyectos
 	</h2>
 
@@ -19,14 +21,16 @@ import SkillCard from "../Card/SkillCard.astro";
 		<div
 			id="codigosa"
 			class="col-span-2 row-span-2 second-color-opacity p-4 rounded lg:rounded-lg
-             flex items-center justify-center grid-box box">
+             flex items-center justify-center grid-box box fade-left"
+			data-animate="">
 			<img class="w-1/2" src="/img/logos/logoCodigosa.svg" alt="Logo 1" />
 		</div>
 
 		<!-- 2) Próximamente 1 -->
 		<div
 			class="col-span-2 col-start-1 row-start-3 second-color-opacity p-4 rounded lg:rounded-lg
-             flex items-center justify-center grid-box box">
+             flex items-center justify-center grid-box box fade-left delay-5"
+			data-animate="">
 			<p
 				class="font-special md:text-[1.7rem] lg:text-[2rem] xl:text-[3rem]">
 				Próximamente
@@ -37,7 +41,8 @@ import SkillCard from "../Card/SkillCard.astro";
 		<div
 			id="portfolio"
 			class="col-start-3 row-start-2 second-color-opacity p-4 rounded lg:rounded-lg
-             flex items-center justify-center grid-box transition box">
+             flex items-center justify-center grid-box transition box fade-up"
+			data-animate="">
 			<img
 				class="w-1/2"
 				src="/img/logos/logoDanielAndroid192.png"
@@ -49,14 +54,16 @@ import SkillCard from "../Card/SkillCard.astro";
 		<div
 			id="codigosa3"
 			class="col-start-3 row-start-3 second-color-opacity p-4 rounded lg:rounded-lg
-             flex items-center justify-center grid-box box">
+             flex items-center justify-center grid-box box fade-up delay-2"
+			data-animate="">
 			<img class="w-1/2" src="/img/logos/logoCodigosa.svg" alt="Logo 1" />
 		</div>
 
 		<!-- 5) Próximamente 2 -->
 		<div
 			class="col-span-2 col-start-3 row-start-1 second-color-opacity p-4 lg:rounded-lg
-             flex items-center justify-center grid-box box">
+             flex items-center justify-center grid-box box fade-right"
+			data-animate="">
 			<p
 				class="font-special md:text-[1.7rem] lg:text-[2rem] xl:text-[3rem]">
 				Próximamente
@@ -67,7 +74,8 @@ import SkillCard from "../Card/SkillCard.astro";
 		<div
 			id="bilbaoskp"
 			class="row-span-2 col-start-4 row-start-2 second-color-opacity p-4 rounded lg:rounded-lg
-             flex items-center justify-center grid-box box">
+             flex items-center justify-center grid-box box fade-right"
+			data-animate="">
 			<img
 				class="w-1/2"
 				src="/img/logos/logoBilbaoSkp.webp"

@@ -428,38 +428,41 @@ const projects = {
   const navLinks = document.querySelectorAll(".nav-link");
 
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+//   const observer = new IntersectionObserver(
+//     (entries) => {
+//       entries.forEach((entry) => {
        
 
-        if (entry.isIntersecting) {
+//         if (entry.isIntersecting) {
 
-          // Eliminar la clase activa de todos
-          navLinks.forEach((link) => {
-			link.classList.remove("active-section") 
-			link.classList.remove("active-sectio-mobile")
-		  }
+//           // Eliminar la clase activa de todos
+//           navLinks.forEach((link) => {
+// 			link.classList.remove("active-section") 
+// 			link.classList.remove("active-sectio-mobile")
+// 		  }
 			
-		  );
+// 		  );
 
-          // Agregar la clase activa al enlace correspondiente
-          const activeLink = document.querySelectorAll(`.nav-link[href="#${entry.target.id}"]`);
-		  activeLink.forEach((link,index) => {			
-			if (link) link.classList.add("active-section");
-			if (index === 1) link.classList.add("active-section-mobile");
-		  });
+//           // Agregar la clase activa al enlace correspondiente
+//           const activeLink = document.querySelectorAll(`.nav-link[href="#${entry.target.id}"]`);
+// 		  activeLink.forEach((link,index) => {			
+// 			if (link) link.classList.add("active-section");
+// 			if (index === 1) link.classList.add("active-section-mobile");
+// 		  });
          
-        }
-      });
-    },
-    {  
-		// rootMargin: "-40% 0px -40% 0px", // Define el margen superior e inferior para centrar
-		threshold: 0.7 // Se activa cuando el 60% de la sección es visible 
-	} 
-  );
+//         }
+//       });
+//     },
+//     {  
+// 		// rootMargin: "-40% 0px -40% 0px", // Define el margen superior e inferior para centrar
+// 		threshold: 0.7 // Se activa cuando el 60% de la sección es visible 
+// 	} 
+//   );
 
-  sections.forEach((section) => observer.observe(section));
+//   sections.forEach((section) => observer.observe(section));
+
+
+
 
 
 
@@ -504,7 +507,76 @@ const projects = {
 		}
 	  });
 	});
+
+
+
   });
   
 
 
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+	// Seleccionamos todos los enlaces del menú
+	const navLinks = document.querySelectorAll('.nav-link');
+  
+	// Función que se ejecuta en cada evento de scroll
+	function onScroll() {
+		// console.log("scroll");
+		
+	  const scrollPos = window.scrollY || document.documentElement.scrollTop;
+  
+	  navLinks.forEach(link => {
+		// Obtenemos la sección que coincide con el href del enlace
+		const section = document.querySelector(link.getAttribute('href'));
+  
+		if (section) {
+		  const sectionTop = section.offsetTop;
+		  const sectionBottom = section.offsetTop + section.offsetHeight; // Posición del borde inferior
+		  const sectionHeight = section.offsetHeight;
+
+		  if(link.getAttribute('href') === "#certificatesSection"){
+			console.log("scrolpos= "+scrollPos +", topsect= "+ (sectionTop-150) +", scrolpos= "+scrollPos +",btn ="+ (sectionTop+sectionHeight-450));
+			console.log("-------------------------------");
+			
+			
+		  }
+  
+		  // Ajusta el valor del offset (por ejemplo, 150) según tus necesidades
+		  if (scrollPos >= (sectionTop-450) && scrollPos < (sectionTop+sectionHeight-450) ) {
+			link.classList.add('active-section');
+		  } else {
+			link.classList.remove('active-section');
+		  }
+		}
+	  });
+	}
+  
+	// Escuchamos el evento scroll
+	window.addEventListener('scroll', onScroll);
+	// Ejecutamos una vez al cargar la página
+	onScroll();
+  });
+  
+
+
+
+
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+	const elements = document.querySelectorAll("[data-animate]");
+  
+	const observer = new IntersectionObserver((entries) => {
+	  entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+		  entry.target.classList.add("visible");
+		}
+	  });
+	}, { threshold: 0.2 });
+  
+	elements.forEach((el) => observer.observe(el));
+  });
