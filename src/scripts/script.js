@@ -119,7 +119,7 @@ const projects = {
 	}
 
 	// Se asigna la clase base con cambios de padding y visibilidad del texto
-	skillCard.className = `bg-[var(--main-background-color)] rounded-md flex items-center gap-2 transition-all duration-300 hover:bg-[var(--second-background-color)] text-[var(--main-char-color)] text-sm xl:text-base font-thin ${
+	skillCard.className = `w-6 h-6 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 xl:w-9 xl:h-9 2xl:w-10 2xl:h-10 bg-[var(--main-background-color)] rounded-md flex items-center justify-center gap-2 transition-all duration-300 hover:bg-[var(--second-background-color)] text-[var(--main-char-color)] text-sm xl:text-base font-thin ${
 		iconSrc ? "px-2 py-2 lg:px-4 rounded-md" : "px-2 py-[0.15rem] lg:px-4 rounded-[0.14rem]"
 	} ${text ? "lg:px-4" : "lg:px-[0.5rem]"}`;
 
@@ -128,7 +128,7 @@ const projects = {
 		const skillIcon = document.createElement("img");
 		skillIcon.src = iconSrc;
 		skillIcon.alt = iconAlt || "";
-		skillIcon.className = "w-5 h-5 sm:w-6 sm:h-6";
+		skillIcon.className = "w-full lg:w-[1rem] xl:w-[1.2rem]";
 		skillCard.appendChild(skillIcon);
 	}
 
