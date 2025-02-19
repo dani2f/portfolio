@@ -9,7 +9,7 @@ const projects = {
 	  image: "/img/proyects/codigosa.webp",
 	  name: "Codigosa",
 	  description:
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie...",
+		"Este proyecto se encuentra en desarrollo...",
 	  skills: [
 		{
 		  iconSrc: "/img/icons/techIcons/frontend/iconJavaScript.svg",
@@ -37,6 +37,9 @@ const projects = {
 			text: "Wordpress",
 		},
 	  ],
+	  urls: {
+		github: "https://github.com/dani2f/codigosa_web_0.1",
+	  }
 	},
 	proximamente: {
 	  image: "/img/proyects/proximamente1.webp",
@@ -44,18 +47,54 @@ const projects = {
 	  description: "Este proyecto se encuentra en desarrollo...",
 	  comingSoon: true, // Marcamos que es un proyecto aún en desarrollo
 	  skills: [],
+	  urls: {
+		
+	  }
 	},
-	codigosa2: {
+	portfolio: {
 	  image: "/img/proyects/codigosa.webp",
-	  name: "Codigosa 2",
-	  description: "Una variante del proyecto Codigosa...",
-	  skills: [],
+	  name: "Portfolio",
+	  description: "Este proyecto se encuentra en desarrollo...",
+	  skills: [
+		{
+			iconSrc: "/img/icons/techIcons/frontend/iconJavaScript.svg",
+			iconAlt: "JavaScript logo",
+			text: "JavaScript",
+		  },
+		  {
+			iconSrc: "/img/icons/techIcons/frontend/iconHTML5.svg",
+			iconAlt: "HTML logo",
+			text: "HTML",
+		  },
+		  {
+			  iconSrc: "/img/icons/techIcons/frontend/iconCSS.svg",
+			  iconAlt: "CSS logo",
+			  text: "CSS",
+		  },
+		  {
+			iconSrc: "/img/icons/techIcons/frontend/iconTailwind.svg",
+			iconAlt: "Tailwind logo",
+			text: "Tailwind",
+		  },
+		  {
+			  iconSrc: "/img/icons/techIcons/frontend/iconAstro.svg",
+			  iconAlt: "Astro logo",
+			  text: "Astro",
+		  },
+	  ],
+	  urls: {
+		github: "https://github.com/dani2f/portfolio",
+		live: "https://danielgomezfullstack.vercel.app/",
+	  }
 	},
 	codigosa3: {
 	  image: "/img/proyects/codigosa.webp",
 	  name: "Codigosa 3",
 	  description: "Otra variante del proyecto Codigosa...",
 	  skills: [],
+	  urls: {
+		
+	  }
 	},
 	bilbaoskp: {
 	  image: "/img/proyects/bilbaoskp.webp",
@@ -63,6 +102,9 @@ const projects = {
 	  description:
 		"Proyecto sobre BilbaoSKP con X características y Y funcionalidades...",
 	  skills: [],
+	  urls: {
+		
+	  }
 	},
   };
   
@@ -70,37 +112,36 @@ const projects = {
   function createSkillCard({ href, iconSrc, iconAlt, text }) {
 	const skillCard = document.createElement("a");
 
-	// Si se proporciona href, se asigna junto con target="_blank".
+	// Si hay href, se añade el atributo junto con target="_blank"
 	if (href) {
-	  skillCard.setAttribute("href", href);
-	  skillCard.setAttribute("target", "_blank");
+		skillCard.setAttribute("href", href);
+		skillCard.setAttribute("target", "_blank");
 	}
-  
-	// Se asigna la clase base y condicional según si hay imagen (src)
+
+	// Se asigna la clase base con cambios de padding y visibilidad del texto
 	skillCard.className = `bg-[var(--main-background-color)] rounded-md flex items-center gap-2 transition-all duration-300 hover:bg-[var(--second-background-color)] text-[var(--main-char-color)] text-sm xl:text-base font-thin ${
-		iconSrc
-		? "px-2 py-2 lg:px-4 rounded-md"
-		: "px-2 py-[0.15rem] lg:px-4 rounded-[0.14rem]"
-	}`;
-  
-	// Si se proporciona src, se crea el elemento img
-	
+		iconSrc ? "px-2 py-2 lg:px-4 rounded-md" : "px-2 py-[0.15rem] lg:px-4 rounded-[0.14rem]"
+	} ${text ? "lg:px-4" : "lg:px-[0.5rem]"}`;
+
+	// Si se proporciona iconSrc, se crea el elemento img
 	if (iconSrc) {
-	  const skillIcon = document.createElement("img");
-	  skillIcon.src = iconSrc;
-	  skillIcon.alt = iconAlt || "";
-	  skillIcon.className = "w-4 h-4 sm:w-5 sm:h-5";
-	  skillCard.appendChild(skillIcon);
+		const skillIcon = document.createElement("img");
+		skillIcon.src = iconSrc;
+		skillIcon.alt = iconAlt || "";
+		skillIcon.className = "w-5 h-5 sm:w-6 sm:h-6";
+		skillCard.appendChild(skillIcon);
 	}
-  
-	// Contenedor para el texto; se muestra con clase condicional si hay imagen.
-	const textContainer = document.createElement("div");
-	textContainer.className = iconSrc ? "hidden lg:flex" : "";
-	textContainer.textContent = text;
-	skillCard.appendChild(textContainer);
-  
+
+	// Contenedor para el texto; se muestra solo si hay contenido
+	if (text) {
+		const textContainer = document.createElement("div");
+		textContainer.className = iconSrc ? "hidden lg:flex" : "";;
+		textContainer.textContent = text;
+		skillCard.appendChild(textContainer);
+	}
+
 	return skillCard;
-  }
+}
 
   
   
@@ -285,22 +326,69 @@ const projects = {
 			  <h3 class="text-left text-[1.5rem] lg:text-[3rem] font-special">
 				${projectData.name}
 			  </h3>
-			  <p class="text-start text-[0.8rem] lg:text-[1rem] font-standard text-[var(--second-char-color)]">
+			  <p class="text-start text-[0.8rem] lg:text-[1rem] font-standard text-[var(--second-char-color)] mb-[1rem]">
 				${projectData.description}
 			  </p>
+
 			`;
+			//container de links para movil
+			const linksContainerLg = document.createElement("div");
+			linksContainerLg.classList.add( "hidden", "lg:flex", "flex-row", "justify-start", "items-center", "gap-2", "w-full");
+			//container de links para pc
+			const linksContainer = document.createElement("div");
+			linksContainer.classList.add("flex", "flex-row", "flex-wrap", "gap-2", "py-[0]", "lg:hidden");
+			
+			//si hay github la ponemos sino no
+			if(projectData.urls.github){
+				linksContainerLg.appendChild(createSkillCard({
+					href: projectData.urls.github,
+					iconSrc: "/img/icons/techIcons/other/iconGithub.svg",
+					iconAlt: "Github logo",
+				}));
+				
+				linksContainer.appendChild(createSkillCard({
+					href: projectData.urls.github,
+					iconSrc: "/img/icons/techIcons/other/iconGithub.svg",
+					iconAlt: "Github logo",
+				}));
+			}
+
+			//si hay url la ponemos sino no
+			if(projectData.urls.live){
+				linksContainerLg.appendChild(createSkillCard({
+					href: projectData.urls.live,
+					iconSrc: "/img/icons/iconGoOtherPage.svg",
+					iconAlt: "Nueva Ventana logo",
+				}));
+				linksContainer.appendChild(createSkillCard({
+					href: projectData.urls.live,
+					iconSrc: "/img/icons/iconGoOtherPage.svg",
+					iconAlt: "Nueva Ventana logo",
+				}));	
+			}
+
+			textContent.appendChild(linksContainerLg);
   
 			// Contenedor para las skill cards
+			const btnContainer = document.createElement("div");
+			btnContainer.classList.add("flex", "flex-row", "flex-wrap", "justify-between", "gap-4", "p-[2%]", "py-[0]", "lg:p-0", "w-full");
+
 			const skillContainer = document.createElement("div");
-			skillContainer.classList.add("flex", "flex-row", "flex-wrap", "gap-4", "p-[2%]", "py-[0]", "lg:p-[7%]");
+			skillContainer.classList.add("flex", "flex-row", "flex-wrap", "gap-2", "lg:p-[7%]", "py-[0]", "lg:p-[7%]");
+
+			
   
 			projectData.skills.forEach((skill) => {
 			  const card = createSkillCard(skill);
 			  skillContainer.appendChild(card);
 			});
+
+		
+			btnContainer.appendChild(skillContainer);
+			btnContainer.appendChild(linksContainer);
   
 			textContainer.appendChild(textContent);
-			textContainer.appendChild(skillContainer);
+			textContainer.appendChild(btnContainer);
   
 			content.appendChild(imageDiv);
 			content.appendChild(textContainer);
