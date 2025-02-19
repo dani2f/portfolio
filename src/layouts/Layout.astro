@@ -6,60 +6,87 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 <!doctype html>
 <html lang="en">
 	<head>
+		<!-- Define la codificación de caracteres (UTF-8 soporta la mayoría de los caracteres) -->
 		<meta charset="UTF-8" />
+
+		<!-- Configura la ventana gráfica para que la página se vea bien en dispositivos móviles -->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Ícono de la pestaña del navegador en formato .ico -->
+		<link rel="icon" href="/favicon.ico" sizes="any" />
+
+		<!-- Ícono alternativo en formato SVG para navegadores que lo soporten -->
 		<link
 			rel="icon"
 			type="image/svg+xml"
-			href="https://danielgomezfullstack.vercel.app/img/logos/logoDaniel.svg"
+			href="/img/logos/logoDaniel.svg"
 		/>
 
-		<!-- SEO Meta Tags -->
+		<!-- Ícono para dispositivos Apple (por ejemplo, al guardar en la pantalla de inicio) -->
+		<link
+			rel="apple-touch-icon"
+			href="/img/logos/logoDaniel.png"
+			sizes="any"
+		/>
+
+		<!-- Archivo de manifiesto para Progressive Web App (PWA) que define la configuración de la app -->
+		<link rel="manifest" href="/manifest.webmanifest" />
+
+		<!-- SEO Meta Tags: información que ayuda a los motores de búsqueda a entender el contenido -->
+		<!-- Descripción de la página -->
 		<meta
 			name="description"
 			content="Desarrollador Full Stack en Bilbao con experiencia en JavaScript, Laravel y Astro.js. Creando experiencias digitales modernas y optimizadas."
 		/>
+		<!-- Palabras clave relevantes para la búsqueda -->
 		<meta
 			name="keywords"
 			content="Desarrollador Full Stack, Frontend, Backend, JavaScript, React.js, Astro.js, Bilbao, Desarrollo Web"
 		/>
+		<!-- Nombre del autor del sitio -->
 		<meta name="author" content="Daniel Gómez" />
 
-		<!-- Open Graph Meta Tags (para compartir en redes) -->
+		<!-- Open Graph Meta Tags: mejoran la apariencia cuando se comparte el enlace en redes sociales -->
+		<!-- Título que se mostrará al compartir -->
 		<meta
 			property="og:title"
 			content="Daniel Gómez - Desarrollador Full Stack"
 		/>
+		<!-- Descripción breve para redes sociales -->
 		<meta
 			property="og:description"
 			content="Desarrollador Full Stack con pasión por la tecnología y el crecimiento profesional."
 		/>
-		<meta
-			property="og:image"
-			content="https://danielgomezfullstack.vercel.app/img/logos/logoDaniel.svg"
-		/>
+		<!-- Imagen que se usará al compartir en redes sociales -->
+		<meta property="og:image" content="/img/logos/logoDaniel.svg" />
+		<!-- URL del sitio web -->
 		<meta
 			property="og:url"
 			content="https://danielgomezfullstack.vercel.app"
 		/>
+		<!-- Tipo de contenido (en este caso, un sitio web) -->
 		<meta property="og:type" content="website" />
 
-		<!-- Twitter Card (para mejorar en Twitter/X) -->
+		<!-- Twitter Card Meta Tags: optimizan la vista previa al compartir en Twitter -->
+		<!-- Tipo de tarjeta, con imagen grande -->
 		<meta name="twitter:card" content="summary_large_image" />
+		<!-- Título que se mostrará en Twitter -->
 		<meta
 			name="twitter:title"
 			content="Daniel Gómez - Desarrollador Full Stack"
 		/>
+		<!-- Descripción para Twitter -->
 		<meta
 			name="twitter:description"
 			content="Desarrollador con pasión por construir y seguir creciendo en el mundo del desarrollo web."
 		/>
-		<meta
-			name="twitter:image"
-			content="https://danielgomezfullstack.vercel.app/img/logos/logoDaniel.svg"
-		/>
+		<!-- Imagen que aparecerá en la tarjeta de Twitter -->
+		<meta name="twitter:image" content="/img/logos/logoDaniel.svg" />
 
+		<!-- Indica que la página fue generada usando Astro -->
 		<meta name="generator" content="Astro" />
+
+		<!-- Título que se muestra en la pestaña del navegador -->
 		<title>Daniel Gómez - Desarrollador Full Stack</title>
 	</head>
 
