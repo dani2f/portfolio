@@ -4,12 +4,12 @@ import HeaderOption from "./HeaderOption.astro";
 
 <!-- Header principal -->
 <header
-	class="sticky w-full top-0 lg:top-5 bg-transparent backdrop-blur-lg text-white px-4 py-2 flex justify-between items-center lg:border-[0.5px] lg:w-[60rem] lg:rounded-[3rem] z-[9999] font-thin">
+	class="sticky w-full top-0 lg:top-5 bg-transparent backdrop-blur-lg text-white px-4 py-[0.35rem] flex justify-between items-center lg:border-[0.5px] lg:w-[60rem] lg:rounded-[3rem] z-[9999] font-thin">
 	<!-- Menú de escritorio (visible en pantallas grandes) -->
 	<a class="text-3xl font-special lg:hidden" href="#frontPageSection">D</a>
 	<nav
 		class="hidden lg:flex flex-row items-center justify-between gap-[8rem] w-full">
-		<a class="text-3xl font-special" href="#frontPageSection">D</a>
+		<a class="text-2xl font-special" href="#frontPageSection">D</a>
 		<div>
 			<HeaderOption sectionName="proyectsSection">Proyectos</HeaderOption>
 			<HeaderOption sectionName="experienceSection"
@@ -24,20 +24,24 @@ import HeaderOption from "./HeaderOption.astro";
 		</div>
 
 		<div class="lg:flex flex-row items-center gap-[1rem]">
-			<a href="https://github.com/dani2f" target="_blank">
+			<a
+				href="https://github.com/dani2f"
+				target="_blank"
+				class="tech-card">
 				<img
 					src="/img/icons/techIcons/other/iconGithub.svg"
 					alt="Github logo"
-					class="w-10 h-10"
+					class="w-8 h-8 bell"
 				/>
 			</a>
 			<a
 				href="https://www.linkedin.com/in/daniel-gomez-cuevas/"
-				target="_blank">
+				target="_blank"
+				class="tech-card">
 				<img
 					src="/img/icons/iconLinkedin.svg"
 					alt="Github logo"
-					class="w-10 h-10"
+					class="w-8 h-8 bell"
 				/>
 			</a>
 		</div>

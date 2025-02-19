@@ -119,9 +119,9 @@ const projects = {
 	}
 
 	// Se asigna la clase base con cambios de padding y visibilidad del texto
-	skillCard.className = `w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-auto lg:h-auto bg-[var(--main-background-color)] rounded-md flex items-center justify-center gap-2 transition-all duration-300 hover:bg-slate-800 text-[var(--main-char-color)] text-sm xl:text-base font-thin ${
+	skillCard.className = `w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-auto lg:h-auto bg-[var(--main-background-color)] rounded-md flex items-center justify-center gap-2 transition-all duration-300 text-[var(--main-char-color)] text-sm xl:text-base font-thin ${
 		iconSrc ? "px-2 py-2 lg:px-4 rounded-md" : "px-2 py-[0.15rem] lg:px-4 rounded-[0.14rem]"
-	} ${text ? "lg:px-4" : "lg:px-[0.5rem]"}`;
+	} ${text ? "lg:px-4" : "lg:px-[0.5rem]"} ${href ? "cursor-pointer  hover:bg-slate-800" : ""}`;
 
 	// Si se proporciona iconSrc, se crea el elemento img
 	if (iconSrc) {
