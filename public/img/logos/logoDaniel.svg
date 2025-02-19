@@ -5,6 +5,6 @@
 <style>
 	svg{ color:#000}
     @media (prefers-color-scheme: dark) {
-        svg{ color:#fff}
+        svg{ color:#E6E6E6}
     }
 </style>
