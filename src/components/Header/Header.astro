@@ -75,18 +75,3 @@ import HeaderOption from "./HeaderOption.astro";
 		>
 	</nav>
 </div>
-
-<!-- Script para activar el menú -->
-<script>
-	const menuToggle = document.getElementById("burger");
-	const mobileMenu = document.getElementById("mobile-menu");
-	const header = document.querySelector("header");
-
-	menuToggle.addEventListener("click", () => {
-		header.classList.toggle("backdrop-blur-lg");
-		mobileMenu.classList.toggle("opacity-100");
-		mobileMenu.classList.toggle("pointer-events-auto");
-		mobileMenu.classList.toggle("opacity-0");
-		mobileMenu.classList.toggle("pointer-events-none");
-	});
-</script>

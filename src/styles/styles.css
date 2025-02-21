@@ -398,7 +398,7 @@ body {
 
 
 
-/* De abajo a arriba */
+
 .fade-up {
 	opacity: 0;
 	transform: translateY(40px);
@@ -410,7 +410,6 @@ body {
 	transform: translateY(0);
 }
 
-/* De izquierda a derecha */
 .fade-left {
 	opacity: 0;
 	transform: translateX(-60px);
@@ -422,7 +421,7 @@ body {
 	transform: translateX(0);
 }
 
-/* De derecha a izquierda */
+
 .fade-right {
 	opacity: 0;
 	transform: translateX(60px);
@@ -434,7 +433,7 @@ body {
 	transform: translateX(0);
 }
 
-/* De abajo a arriba con giro */
+
 .fade-down {
 	opacity: 0;
 	transform: translateY(-40px);
