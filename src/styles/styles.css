@@ -57,12 +57,12 @@ body {
 	font-family: var(--standard-font);
 	color: var(--main-char-color);
 	margin: 0;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+
 
 }
 
-.frontPageSection {
+body {
 	overflow-x: hidden;
 }
 
