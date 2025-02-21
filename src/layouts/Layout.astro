@@ -12,9 +12,6 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 		<!-- Configura la ventana gráfica para que la página se vea bien en dispositivos móviles -->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- Ícono de la pestaña del navegador en formato .ico -->
-		<link rel="icon" href="/favicon.ico" sizes="any" />
-
 		<!-- Ícono alternativo en formato SVG para navegadores que lo soporten -->
 		<link
 			rel="icon"
@@ -94,6 +91,7 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 		<slot />
 		<!-- Tu script con la lógica -->
 		<SpeedInsights />
+
 		<script src="/src/scripts/script.js"></script>
 	</body>
 </html>
