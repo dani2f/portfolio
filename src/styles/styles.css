@@ -62,9 +62,26 @@ body {
 
 }
 
+* {
+	box-sizing: border-box;
+}
+
+html,
 body {
+	width: 100%;
 	overflow-x: hidden;
 }
+
+body {
+	overflow-x: hidden;
+	/* Para evitar desplazamiento horizontal en dispositivos móviles */
+}
+
+body * {
+	max-width: 100%;
+	/* Asegura que los elementos no sobresalgan */
+}
+
 
 
 .pattern {
