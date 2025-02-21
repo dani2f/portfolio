@@ -1,3 +1,6 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 if (navigator.userAgent.includes("SamsungBrowser")) {
     document.getElementsByTagName("body")[0].style.backgroundColor = "#fff";
 }
@@ -534,13 +537,6 @@ const projects = {
 		  const sectionTop = section.offsetTop;
 		  const sectionBottom = section.offsetTop + section.offsetHeight; // Posición del borde inferior
 		  const sectionHeight = section.offsetHeight;
-
-		  if(link.getAttribute('href') === "#certificatesSection"){
-			console.log("scrolpos= "+scrollPos +", topsect= "+ (sectionTop-150) +", scrolpos= "+scrollPos +",btn ="+ (sectionTop+sectionHeight-450));
-			console.log("-------------------------------");
-			
-			
-		  }
   
 		  // Ajusta el valor del offset (por ejemplo, 150) según tus necesidades
 		  if (scrollPos >= (sectionTop-450) && scrollPos < (sectionTop+sectionHeight-450) ) {
@@ -559,6 +555,18 @@ const projects = {
   });
   
 
+  //menu burger
+  const menuToggle = document.getElementById("burger");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const header = document.querySelector("header");
+
+  menuToggle.addEventListener("click", () => {
+	  header.classList.toggle("backdrop-blur-lg");
+	  mobileMenu.classList.toggle("opacity-100");
+	  mobileMenu.classList.toggle("pointer-events-auto");
+	  mobileMenu.classList.toggle("opacity-0");
+	  mobileMenu.classList.toggle("pointer-events-none");
+  });
 
 
 
@@ -567,7 +575,69 @@ const projects = {
 
 
 
-  document.addEventListener("DOMContentLoaded", () => {
+
+// Asegurar que el código solo se ejecute en el cliente
+if (typeof window !== "undefined") {
+	gsap.registerPlugin(ScrollTrigger);
+  
+	document.addEventListener("DOMContentLoaded", () => {
+   
+	  // Fade-in desde la opacidad 0
+	  const fadeInElements = document.querySelectorAll(".fade-in");
+	  fadeInElements.forEach((el) => {
+		  gsap.from(el, {
+			  opacity: 0,
+			  duration: 1,
+			  y: 50,
+			  scrollTrigger: {
+			  trigger: el,
+			  start: "top 98%",
+			  toggleActions: "play none none none",
+			  },
+		  });
+	  });
+  
+  
+  
+	  // Zoom-in
+	  const zoomInElements = document.querySelectorAll(".zoom-in");
+	  zoomInElements.forEach((el) => {
+		  gsap.from(el, {
+			  scale: 0.8,
+			  opacity: 0,
+			  duration: 1,
+			  scrollTrigger: {
+			  trigger: el,
+			  start: "top 90%",
+			  toggleActions: "play none none none",
+			  },
+		  });
+	  });
+  
+  
+	  // Efecto Parallax
+	  const parallaxElements = document.querySelectorAll(".parallax");
+	  parallaxElements.forEach((el) => {
+		  gsap.to(el, {
+			  y: -500,
+			  ease: "none",
+			  scrollTrigger: {
+			  trigger: el,
+			  start: "top bottom",
+			  end: "bottom top",
+			  scrub: true,
+			  },
+		  });
+	  });
+
+  });
+}
+
+
+
+  
+
+document.addEventListener("DOMContentLoaded", () => {
 	const elements = document.querySelectorAll("[data-animate]");
   
 	const observer = new IntersectionObserver((entries) => {
