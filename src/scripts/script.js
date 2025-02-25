@@ -9,35 +9,43 @@ if (navigator.userAgent.includes("SamsungBrowser")) {
 // 1. Objeto con la información de cada proyecto, indexado por ID
 const projects = {
 	codigosa: {
-	  image: "/img/proyects/codigosa.webp",
+	  image: [
+		"/img/proyects/previews/Codigosa_preview.webp",
+		"/img/proyects/previews/Codigosa_preview_mv.webp"
+	  ],
 	  name: "Codigosa",
 	  description:
-		"Este proyecto se encuentra en desarrollo...",
+		"Es un proyecto que tiene como objetivo la digitalización de negocios y buscar aumentar la visibilidad de los negocios a través de internet, con la posibilidad de hacer todo tipo de pagina a gusto del cliente",
 	  skills: [
 		{
 		  iconSrc: "/img/icons/techIcons/frontend/iconJavaScript.svg",
-		  iconAlt: "JavaScript logo",
+		  iconAlt: "Logo de JavaScript",
 		  text: "JavaScript",
 		},
 		{
 		  iconSrc: "/img/icons/techIcons/frontend/iconHTML5.svg",
-		  iconAlt: "HTML logo",
-		  text: "HTML",
+		  iconAlt: "Logo de HTML5",
+		  text: "HTML5",
 		},
 		{
 			iconSrc: "/img/icons/techIcons/frontend/iconCSS.svg",
-			iconAlt: "CSS logo",
+			iconAlt: "Logo de CSS",
 			text: "CSS",
 		},
 		{
-			iconSrc: "/img/icons/techIcons/frontend/iconReact.svg",
-			iconAlt: "React logo",
-			text: "React",
+			iconSrc: "/img/icons/techIcons/frontend/iconAstro.svg",
+			iconAlt: "Logo de Astro",
+			text: "Astro",
 		},
 		{
 			iconSrc: "/img/icons/techIcons/other/iconWordPress.svg",
-			iconAlt: "Wordpress logo",
+			iconAlt: "Logo de Wordpress",
 			text: "Wordpress",
+		},
+		{
+			iconSrc: "/img/icons/techIcons/frontend/iconTypeScript.svg",
+			iconAlt: "Logo de TypeScript",
+			text: "TypeScript",
 		},
 	  ],
 	  urls: {
@@ -45,7 +53,11 @@ const projects = {
 	  }
 	},
 	proximamente: {
-	  image: "/img/proyects/proximamente1.webp",
+		image: [
+			"/img/proyects/proximamente1.webp",
+			"/img/proyects/proximamente1.webp"
+		  ],
+
 	  name: "Proyecto Próximamente 1",
 	  description: "Este proyecto se encuentra en desarrollo...",
 	  comingSoon: true, // Marcamos que es un proyecto aún en desarrollo
@@ -55,33 +67,36 @@ const projects = {
 	  }
 	},
 	portfolio: {
-	  image: "/img/proyects/codigosa.webp",
+		image: [
+			"/img/proyects/previews/portfolio_preview.webp",
+			"/img/proyects/previews/portolio_preview_mv.webp"
+		  ],
 	  name: "Portfolio",
-	  description: "Este proyecto se encuentra en desarrollo...",
+	  description: "Aqui podrás ver los proyectos que desarrollo en mi tiempo libre. Además de la experiencia laboral y las tecnologías que he utilizado, también puedes ver los certificados que he obtenido durante mi carrera.",
 	  skills: [
-		{
+		  {
 			iconSrc: "/img/icons/techIcons/frontend/iconJavaScript.svg",
-			iconAlt: "JavaScript logo",
+			iconAlt: "Logo de JavaScript",
 			text: "JavaScript",
 		  },
 		  {
 			iconSrc: "/img/icons/techIcons/frontend/iconHTML5.svg",
-			iconAlt: "HTML logo",
+			iconAlt: "Logo de HTML",
 			text: "HTML",
 		  },
 		  {
 			  iconSrc: "/img/icons/techIcons/frontend/iconCSS.svg",
-			  iconAlt: "CSS logo",
+			  iconAlt: "Logo de CSS",
 			  text: "CSS",
 		  },
 		  {
 			iconSrc: "/img/icons/techIcons/frontend/iconTailwind.svg",
-			iconAlt: "Tailwind logo",
+			iconAlt: "Logo de Tailwind",
 			text: "Tailwind",
 		  },
 		  {
 			  iconSrc: "/img/icons/techIcons/frontend/iconAstro.svg",
-			  iconAlt: "Astro logo",
+			  iconAlt: "Logo de Astro",
 			  text: "Astro",
 		  },
 	  ],
@@ -90,21 +105,64 @@ const projects = {
 		live: "https://danielgomezfullstack.vercel.app/",
 	  }
 	},
-	codigosa3: {
-	  image: "/img/proyects/codigosa.webp",
-	  name: "Codigosa 3",
-	  description: "Otra variante del proyecto Codigosa...",
-	  skills: [],
+	adaxa: {
+	  image: [
+		"/img/proyects/previews/Adaxa_preview.webp",
+		"/img/proyects/previews/Adaxa_preview_mv.webp"
+	  ],
+	  name: "Adaxa",
+	  description: "Proyecto para una empresa de desarrollo web, es la página de presentación la cual pretende dar a conocer sus servicios.",
+	  skills: [
+		  {
+			iconSrc: "/img/icons/techIcons/frontend/iconJavaScript.svg",
+			iconAlt: "Logo de JavaScript",
+			text: "JavaScript",
+		  },
+		  { 
+			iconSrc: "/img/icons/techIcons/frontend/iconCSS.svg",
+			iconAlt: "Logo de CSS",
+			text: "CSS",
+		  },
+		  {
+			iconSrc: "/img/icons/techIcons/frontend/iconHTML5.svg",
+			iconAlt: "Logo de HTML5",
+			text: "HTML5",
+		  },
+	  ],
 	  urls: {
 		
 	  }
 	},
 	bilbaoskp: {
-	  image: "/img/proyects/bilbaoskp.webp",
+		image: [
+			"/img/proyects/previews/BilbaoSkp_preview.webp",
+			"/img/proyects/previews/BilbaoSkp_preview_mv.webp"
+		  ],
 	  name: "BilbaoSKP",
 	  description:
-		"Proyecto sobre BilbaoSKP con X características y Y funcionalidades...",
-	  skills: [],
+		"Proyecto para una empresa dedicada al mundo de los Escape Rooms, la cual queria poder tener posibilidad de reservar y tener Escape Rooms para jugar de manera online. Puedes comprar los cupones en la página y mediante ellos comprar o reservar escape rooms",
+	  skills: [
+		  { 
+			iconSrc: "/img/icons/techIcons/frontend/iconCSS.svg",
+			iconAlt: "Logo de CSS",
+			text: "CSS",
+		  },
+		  {
+			iconSrc: "/img/icons/techIcons/frontend/iconHTML5.svg",
+			iconAlt: "Logo de HTML5",
+			text: "HTML5",
+		  },
+		  {
+			iconSrc: "/img/icons/techIcons/backend/iconJava.svg",
+			iconAlt: "Logo de Java",
+			text: "Java",
+		  },
+		  {
+			  iconSrc: "/img/icons/techIcons/backend/iconEclipse.svg",
+			  iconAlt: "Logo de Eclipse",
+			  text: "Eclipse",
+		  },
+	  ],
 	  urls: {
 		
 	  }
@@ -237,7 +295,7 @@ const projects = {
 		  if (projectData.comingSoon) {
 			content.classList.add(
 			  "w-[80vw]",
-			  "h-[35vh]",
+			  "h-[50vh]",
 			  "sm:w-[70vw]",
 			  "sm:h-[40vh]",
 			  "md:w-[80vw]",
@@ -276,7 +334,7 @@ const projects = {
 			// Contenido normal para proyectos terminados
 			content.classList.add(
 			  "w-[80vw]",
-			  "h-[35vh]",
+			  "h-[50vh]",
 			  "sm:w-[70vw]",
 			  "sm:h-[40vh]",
 			  "md:w-[80vw]",
@@ -306,7 +364,13 @@ const projects = {
 			  "lg:h-full",
 			  "rounded-lg"
 			);
-			imageDiv.style.backgroundImage = `url(${projectData.image})`;
+			if(window.innerWidth >= 1024){
+				imageDiv.style.backgroundImage = `url(${projectData.image[0]})`;
+			}
+			else{
+				imageDiv.style.backgroundImage = `url(${projectData.image[1]})`;
+			}
+			// imageDiv.style.backgroundImage = `url(${projectData.image})`;
   
 			// Contenedor de texto y skills
 			const textContainer = document.createElement("div");
@@ -324,7 +388,7 @@ const projects = {
 			);
   
 			const textContent = document.createElement("div");
-			textContent.classList.add("p-[2%]", "pb-[1%]", "lg:p-[7%]");
+			textContent.classList.add("p-[2%]", "pt-0", "pb-[1%]", "lg:p-[7%]");
 			textContent.innerHTML = `
 			  <h3 class="text-left text-[1.5rem] lg:text-[3rem] font-special">
 				${projectData.name}
@@ -407,7 +471,7 @@ const projects = {
 		  // Botón de cierre
 		  const closeButton = document.createElement("img");
 		  closeButton.src = "/img/icons/iconClose.svg";
-		  closeButton.classList.add("text-white", "absolute", "w-[5%]","md:w-[4%]" ,"lg:w-[3%]","2xl:w-[2%]", "top-5", "right-5", "cursor-pointer", "z-10", "opacity-0", "transition-opacity", "duration-300", "ease-in-out");
+		  closeButton.classList.add("text-white", "absolute", "w-[5%]","md:w-[4%]" ,"lg:w-[3%]","2xl:w-[2%]", "top-5", "right-5", "cursor-pointer", "z-10", "opacity-0", "transition-opacity", "duration-300", "ease-in-out", "text-shadow");
 		  closeButton.alt = "Cerrar";
 
   
