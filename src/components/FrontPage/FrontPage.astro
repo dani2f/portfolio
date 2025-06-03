@@ -43,10 +43,30 @@ import SkillCard from "../Card/SkillCard.astro";
 		</nav>
 	</article>
 
-	<article
-		class="w-full h-[40vh] object-cover hidden lg:flex bg-slate-600 opacity-20 fade-left"
-		data-animate>
-	</article>
+<article
+  class="w-full h-[40vh] hidden lg:flex relative overflow-hidden" 
+  data-animate
+>
+  <img
+    src="/img/portadaDani.webp"
+    alt="Daniel Gómez"
+    class="w-full h-full object-cover object-top z-0"
+  />
+
+  <!-- Capa de difuminado radial encima -->
+  <div class="absolute inset-0 z-10 pointer-events-none"
+     style="background: radial-gradient(ellipse at center, transparent 40%, #222B33 70%, #222B33 40%);">
+</div>
+
+
+  <!-- También podrías usar gradientes laterales si prefieres -->
+</article>
+
+
+
+
+
+
 	<!-- <img
 		src="/img/"
 		alt="Background"
