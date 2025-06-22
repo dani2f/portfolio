@@ -49,7 +49,8 @@ const projects = {
 		},
 	  ],
 	  urls: {
-		github: "https://github.com/dani2f/codigosa_web_0.1",
+		github: "https://github.com/dani2f/codigosa-astro",
+		live: "https://www.codigosa.es/",
 	  }
 	},
 	proximamente: {
