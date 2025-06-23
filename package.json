@@ -9,6 +9,7 @@
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@astrojs/sitemap": "^3.4.1",
 		"@astrojs/tailwind": "^6.0.0",
 		"@astrojs/vercel": "^8.0.7",
 		"@vercel/speed-insights": "^1.2.0",
@@ -19,5 +20,8 @@
 	"devDependencies": {
 		"prettier": "^3.5.0",
 		"prettier-plugin-astro": "^0.14.1"
+	},
+	"overrides": {
+		"path-to-regexp": "^6.2.3"
 	}
 }
