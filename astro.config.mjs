@@ -9,6 +9,12 @@ export default defineConfig({
   adapter: vercel(),
   integrations: [
     tailwind(),
-    sitemap(),         // aunque vayamos a exponerlo manualmente
+    sitemap(
+		{
+			changefreq: 'daily',
+			priority: 0.8,
+			filter: (page) => !page.includes('/secret/'),
+		}		
+	),         // aunque vayamos a exponerlo manualmente
   ],
 });
