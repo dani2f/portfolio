@@ -1,0 +1,6 @@
+# Permitir a todos los crawlers
+User-agent: *
+Allow: /
+
+# Indicar la ubicación de tu sitemap
+Sitemap: https://danielgomezfullstack.vercel.app/sitemap-index.xml
