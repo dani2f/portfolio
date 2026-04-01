@@ -5,13 +5,12 @@ if (navigator.userAgent.includes("SamsungBrowser")) {
 	document.getElementsByTagName("body")[0].style.backgroundColor = "#fff";
 }
 
-
 // 1. Objeto con la información de cada proyecto, indexado por ID
 const projects = {
 	codigosa: {
 		image: [
 			"/img/proyects/previews/Codigosa_preview.webp",
-			"/img/proyects/previews/Codigosa_preview_mv.webp"
+			"/img/proyects/previews/Codigosa_preview_mv.webp",
 		],
 		name: "Codigosa",
 		description:
@@ -51,29 +50,28 @@ const projects = {
 		urls: {
 			github: "https://github.com/dani2f/codigosa-astro",
 			live: "https://www.codigosa.es/",
-		}
+		},
 	},
 	proximamente: {
 		image: [
 			"/img/proyects/proximamente1.webp",
-			"/img/proyects/proximamente1.webp"
+			"/img/proyects/proximamente1.webp",
 		],
 
 		name: "Proyecto Próximamente 1",
 		description: "Este proyecto se encuentra en desarrollo...",
 		comingSoon: true, // Marcamos que es un proyecto aún en desarrollo
 		skills: [],
-		urls: {
-
-		}
+		urls: {},
 	},
 	hireflow: {
 		image: [
 			"/img/proyects/previews/hireflow_preview.webp",
-			"/img/proyects/previews/hireflow_preview_mv.webp"
+			"/img/proyects/previews/hireflow_preview_mv.webp",
 		],
 		name: "HireFlow IA",
-		description: "Aplicación de búsqueda de empleo que, gracias a tu perfil, utiliza IA para localizar empresas cercanas y enviar solicitudes por correo electrónico; así podrás enviar muchas candidaturas en poco tiempo.",
+		description:
+			"Aplicación de búsqueda de empleo que, gracias a tu perfil, utiliza IA para localizar empresas cercanas y enviar solicitudes por correo electrónico; así podrás enviar muchas candidaturas en poco tiempo.",
 		skills: [
 			{
 				iconSrc: "/img/icons/techIcons/fullstack/iconNext.svg",
@@ -89,15 +87,16 @@ const projects = {
 		urls: {
 			github: "https://github.com/dani2f/hire-flow-ia",
 			live: "https://hire-flow-ia.vercel.app/",
-		}
+		},
 	},
 	portfolio: {
 		image: [
 			"/img/proyects/previews/portfolio_preview.webp",
-			"/img/proyects/previews/portolio_preview_mv.webp"
+			"/img/proyects/previews/portolio_preview_mv.webp",
 		],
 		name: "Portfolio",
-		description: "Aqui podrás ver los proyectos que desarrollo en mi tiempo libre. Además de la experiencia laboral y las tecnologías que he utilizado, también puedes ver los certificados que he obtenido durante mi carrera.",
+		description:
+			"Aqui podrás ver los proyectos que desarrollo en mi tiempo libre. Además de la experiencia laboral y las tecnologías que he utilizado, también puedes ver los certificados que he obtenido durante mi carrera.",
 		skills: [
 			{
 				iconSrc: "/img/icons/techIcons/frontend/iconJavaScript.svg",
@@ -128,15 +127,16 @@ const projects = {
 		urls: {
 			github: "https://github.com/dani2f/portfolio",
 			live: "https://danielgomezfullstack.vercel.app/",
-		}
+		},
 	},
 	adaxa: {
 		image: [
 			"/img/proyects/previews/Adaxa_preview.webp",
-			"/img/proyects/previews/Adaxa_preview_mv.webp"
+			"/img/proyects/previews/Adaxa_preview_mv.webp",
 		],
 		name: "Adaxa",
-		description: "Proyecto para una empresa de desarrollo web, es la página de presentación la cual pretende dar a conocer sus servicios.",
+		description:
+			"Proyecto para una empresa de desarrollo web, es la página de presentación la cual pretende dar a conocer sus servicios.",
 		skills: [
 			{
 				iconSrc: "/img/icons/techIcons/frontend/iconJavaScript.svg",
@@ -154,14 +154,12 @@ const projects = {
 				text: "HTML5",
 			},
 		],
-		urls: {
-
-		}
+		urls: {},
 	},
 	bilbaoskp: {
 		image: [
 			"/img/proyects/previews/BilbaoSkp_preview.webp",
-			"/img/proyects/previews/BilbaoSkp_preview_mv.webp"
+			"/img/proyects/previews/BilbaoSkp_preview_mv.webp",
 		],
 		name: "BilbaoSKP",
 		description:
@@ -188,9 +186,7 @@ const projects = {
 				text: "Eclipse",
 			},
 		],
-		urls: {
-
-		}
+		urls: {},
 	},
 };
 
@@ -205,8 +201,11 @@ function createSkillCard({ href, iconSrc, iconAlt, text }) {
 	}
 
 	// Se asigna la clase base con cambios de padding y visibilidad del texto
-	skillCard.className = `w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-auto lg:h-auto bg-[var(--main-background-color)] rounded-md flex items-center justify-center gap-2 transition-all duration-300 text-[var(--main-char-color)] text-sm xl:text-base font-thin ${iconSrc ? "px-2 py-2 lg:px-4 rounded-md" : "px-2 py-[0.15rem] lg:px-4 rounded-[0.14rem]"
-		} ${text ? "lg:px-4" : "lg:px-[0.5rem]"} ${href ? "cursor-pointer  hover:bg-slate-800" : ""}`;
+	skillCard.className = `w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-auto lg:h-auto bg-[var(--main-background-color)] rounded-md flex items-center justify-center gap-2 transition-all duration-300 text-[var(--main-char-color)] text-sm xl:text-base font-thin ${
+		iconSrc
+			? "px-2 py-2 lg:px-4 rounded-md"
+			: "px-2 py-[0.15rem] lg:px-4 rounded-[0.14rem]"
+	} ${text ? "lg:px-4" : "lg:px-[0.5rem]"} ${href ? "cursor-pointer  hover:bg-slate-800" : ""}`;
 
 	// Si se proporciona iconSrc, se crea el elemento img
 	if (iconSrc) {
@@ -220,15 +219,13 @@ function createSkillCard({ href, iconSrc, iconAlt, text }) {
 	// Contenedor para el texto; se muestra solo si hay contenido
 	if (text) {
 		const textContainer = document.createElement("div");
-		textContainer.className = iconSrc ? "hidden lg:flex" : "";;
+		textContainer.className = iconSrc ? "hidden lg:flex" : "";
 		textContainer.textContent = text;
 		skillCard.appendChild(textContainer);
 	}
 
 	return skillCard;
 }
-
-
 
 // 3. Listener para abrir el overlay al hacer clic en una caja
 document.addEventListener("click", (event) => {
@@ -238,7 +235,6 @@ document.addEventListener("click", (event) => {
 	}
 
 	if (target.classList.contains("grid-box")) {
-
 		//quitamos la clase que ahce la animacion de hover (para que en movil no se quede pillado), y luego la agregamos
 		target.classList.remove("box");
 
@@ -255,10 +251,6 @@ document.addEventListener("click", (event) => {
 		document.addEventListener("touchstart", restoreBox);
 		document.addEventListener("click", restoreBox);
 
-
-
-
-
 		// Tomamos el ID del proyecto
 		let projectId = null;
 		if (target.getAttribute("id")) {
@@ -273,7 +265,9 @@ document.addEventListener("click", (event) => {
 
 		// Animaciones y dimensiones del overlay
 		const rect = target.getBoundingClientRect();
-		const parentRect = document.getElementById("all-grid").getBoundingClientRect();
+		const parentRect = document
+			.getElementById("all-grid")
+			.getBoundingClientRect();
 
 		const startLeft = rect.left - parentRect.left;
 		const startTop = rect.top - parentRect.top;
@@ -288,10 +282,22 @@ document.addEventListener("click", (event) => {
 		overlay.classList.add("grid-overlay");
 
 		// Definimos variables CSS para animación si lo deseas
-		document.documentElement.style.setProperty("--start-left", `${startLeft}px`);
-		document.documentElement.style.setProperty("--start-top", `${startTop}px`);
-		document.documentElement.style.setProperty("--start-width", `${startWidth}px`);
-		document.documentElement.style.setProperty("--start-height", `${startHeight}px`);
+		document.documentElement.style.setProperty(
+			"--start-left",
+			`${startLeft}px`,
+		);
+		document.documentElement.style.setProperty(
+			"--start-top",
+			`${startTop}px`,
+		);
+		document.documentElement.style.setProperty(
+			"--start-width",
+			`${startWidth}px`,
+		);
+		document.documentElement.style.setProperty(
+			"--start-height",
+			`${startHeight}px`,
+		);
 
 		// Estilos del overlay
 		overlay.style.position = "absolute";
@@ -333,23 +339,39 @@ document.addEventListener("click", (event) => {
 						"flex-col",
 						"justify-center",
 						"items-center",
-						"rounded-lg"
+						"rounded-lg",
 					);
 
 					// Contenedor interno para centrar el icono y el texto
 					const comingSoonContainer = document.createElement("div");
-					comingSoonContainer.classList.add("flex", "flex-col", "justify-center", "items-center", "gap-[3rem]");
+					comingSoonContainer.classList.add(
+						"flex",
+						"flex-col",
+						"justify-center",
+						"items-center",
+						"gap-[3rem]",
+					);
 
 					// Icono (la ruta la colocarás tú)
 					const comingSoonIcon = document.createElement("img");
 					comingSoonIcon.src = "/img/icons/iconSoon.webp"; // Actualiza la ruta según corresponda
 					comingSoonIcon.alt = "Próximamente";
-					comingSoonIcon.classList.add("w-[5rem]", "h-[5rem]", "lg:w-[10rem]", "lg:h-[10rem]"); // Puedes ajustar el tamaño
+					comingSoonIcon.classList.add(
+						"w-[5rem]",
+						"h-[5rem]",
+						"lg:w-[10rem]",
+						"lg:h-[10rem]",
+					); // Puedes ajustar el tamaño
 
 					// Texto indicativo
 					const comingSoonText = document.createElement("p");
 					comingSoonText.textContent = "Próximamente";
-					comingSoonText.classList.add("text-2xl", "md:text-[2rem]", "lg:text-[3rem]", "font-special");
+					comingSoonText.classList.add(
+						"text-2xl",
+						"md:text-[2rem]",
+						"lg:text-[3rem]",
+						"font-special",
+					);
 
 					comingSoonContainer.appendChild(comingSoonIcon);
 					comingSoonContainer.appendChild(comingSoonText);
@@ -374,7 +396,7 @@ document.addEventListener("click", (event) => {
 						"justify-center",
 						"items-center",
 						"mb-[5rem]",
-						"rounded-lg"
+						"rounded-lg",
 					);
 
 					// Imagen de fondo dinámica
@@ -386,12 +408,11 @@ document.addEventListener("click", (event) => {
 						"h-[50%]",
 						"lg:w-[50%]",
 						"lg:h-full",
-						"rounded-lg"
+						"rounded-lg",
 					);
 					if (window.innerWidth >= 1024) {
 						imageDiv.style.backgroundImage = `url(${projectData.image[0]})`;
-					}
-					else {
+					} else {
 						imageDiv.style.backgroundImage = `url(${projectData.image[1]})`;
 					}
 					// imageDiv.style.backgroundImage = `url(${projectData.image})`;
@@ -408,11 +429,16 @@ document.addEventListener("click", (event) => {
 						"justify-around",
 						"lg:justify-between",
 						"items-start",
-						"lg:gap-6"
+						"lg:gap-6",
 					);
 
 					const textContent = document.createElement("div");
-					textContent.classList.add("p-[2%]", "pt-0", "pb-[1%]", "lg:p-[7%]");
+					textContent.classList.add(
+						"p-[2%]",
+						"pt-0",
+						"pb-[1%]",
+						"lg:p-[7%]",
+					);
 					textContent.innerHTML = `
 			  <h3 class="text-left text-[1.5rem] lg:text-[3rem] font-special">
 				${projectData.name}
@@ -424,56 +450,96 @@ document.addEventListener("click", (event) => {
 			`;
 					//container de links para movil
 					const linksContainerLg = document.createElement("div");
-					linksContainerLg.classList.add("hidden", "lg:flex", "flex-row", "justify-start", "items-center", "gap-2", "w-full");
+					linksContainerLg.classList.add(
+						"hidden",
+						"lg:flex",
+						"flex-row",
+						"justify-start",
+						"items-center",
+						"gap-2",
+						"w-full",
+					);
 					//container de links para pc
 					const linksContainer = document.createElement("div");
-					linksContainer.classList.add("flex", "flex-row", "flex-wrap", "gap-2", "py-[0]", "lg:hidden");
+					linksContainer.classList.add(
+						"flex",
+						"flex-row",
+						"flex-wrap",
+						"gap-2",
+						"py-[0]",
+						"lg:hidden",
+					);
 
 					//si hay github la ponemos sino no
 					if (projectData.urls.github) {
-						linksContainerLg.appendChild(createSkillCard({
-							href: projectData.urls.github,
-							iconSrc: "/img/icons/techIcons/other/iconGithub.svg",
-							iconAlt: "Github logo",
-						}));
+						linksContainerLg.appendChild(
+							createSkillCard({
+								href: projectData.urls.github,
+								iconSrc:
+									"/img/icons/techIcons/other/iconGithub.svg",
+								iconAlt: "Github logo",
+							}),
+						);
 
-						linksContainer.appendChild(createSkillCard({
-							href: projectData.urls.github,
-							iconSrc: "/img/icons/techIcons/other/iconGithub.svg",
-							iconAlt: "Github logo",
-						}));
+						linksContainer.appendChild(
+							createSkillCard({
+								href: projectData.urls.github,
+								iconSrc:
+									"/img/icons/techIcons/other/iconGithub.svg",
+								iconAlt: "Github logo",
+							}),
+						);
 					}
 
 					//si hay url la ponemos sino no
 					if (projectData.urls.live) {
-						linksContainerLg.appendChild(createSkillCard({
-							href: projectData.urls.live,
-							iconSrc: "/img/icons/iconGoOtherPage.svg",
-							iconAlt: "Nueva Ventana logo",
-						}));
-						linksContainer.appendChild(createSkillCard({
-							href: projectData.urls.live,
-							iconSrc: "/img/icons/iconGoOtherPage.svg",
-							iconAlt: "Nueva Ventana logo",
-						}));
+						linksContainerLg.appendChild(
+							createSkillCard({
+								href: projectData.urls.live,
+								iconSrc: "/img/icons/iconGoOtherPage.svg",
+								iconAlt: "Nueva Ventana logo",
+							}),
+						);
+						linksContainer.appendChild(
+							createSkillCard({
+								href: projectData.urls.live,
+								iconSrc: "/img/icons/iconGoOtherPage.svg",
+								iconAlt: "Nueva Ventana logo",
+							}),
+						);
 					}
 
 					textContent.appendChild(linksContainerLg);
 
 					// Contenedor para las skill cards
 					const btnContainer = document.createElement("div");
-					btnContainer.classList.add("flex", "flex-row", "flex-wrap", "justify-between", "gap-4", "p-[2%]", "py-[0]", "lg:p-0", "w-full");
+					btnContainer.classList.add(
+						"flex",
+						"flex-row",
+						"flex-wrap",
+						"justify-between",
+						"gap-4",
+						"p-[2%]",
+						"py-[0]",
+						"lg:p-0",
+						"w-full",
+					);
 
 					const skillContainer = document.createElement("div");
-					skillContainer.classList.add("flex", "flex-row", "flex-wrap", "gap-2", "lg:p-[7%]", "py-[0]", "lg:p-[7%]");
-
-
+					skillContainer.classList.add(
+						"flex",
+						"flex-row",
+						"flex-wrap",
+						"gap-2",
+						"lg:p-[7%]",
+						"py-[0]",
+						"lg:p-[7%]",
+					);
 
 					projectData.skills.forEach((skill) => {
 						const card = createSkillCard(skill);
 						skillContainer.appendChild(card);
 					});
-
 
 					btnContainer.appendChild(skillContainer);
 					btnContainer.appendChild(linksContainer);
@@ -486,7 +552,17 @@ document.addEventListener("click", (event) => {
 				}
 
 				// Posicionamos el contenido en el centro y animamos la opacidad
-				content.classList.add("absolute", "top-1/2", "left-1/2", "transform", "-translate-x-1/2", "-translate-y-1/2", "opacity-0", "transition-opacity", "duration-300", "ease-in-out"
+				content.classList.add(
+					"absolute",
+					"top-1/2",
+					"left-1/2",
+					"transform",
+					"-translate-x-1/2",
+					"-translate-y-1/2",
+					"opacity-0",
+					"transition-opacity",
+					"duration-300",
+					"ease-in-out",
 				);
 				overlay.appendChild(content);
 
@@ -495,9 +571,24 @@ document.addEventListener("click", (event) => {
 				// Botón de cierre
 				const closeButton = document.createElement("img");
 				closeButton.src = "/img/icons/iconClose.svg";
-				closeButton.classList.add("text-white", "absolute", "w-[5%]", "md:w-[4%]", "lg:w-[3%]", "2xl:w-[2%]", "top-5", "right-5", "cursor-pointer", "z-10", "opacity-0", "transition-opacity", "duration-300", "ease-in-out", "text-shadow");
+				closeButton.classList.add(
+					"text-white",
+					"absolute",
+					"w-[5%]",
+					"md:w-[4%]",
+					"lg:w-[3%]",
+					"2xl:w-[2%]",
+					"top-5",
+					"right-5",
+					"cursor-pointer",
+					"z-10",
+					"opacity-0",
+					"transition-opacity",
+					"duration-300",
+					"ease-in-out",
+					"text-shadow",
+				);
 				closeButton.alt = "Cerrar";
-
 
 				closeButton.addEventListener("click", () => {
 					// Al cerrar, animamos el overlay a opacidad 0
@@ -513,22 +604,18 @@ document.addEventListener("click", (event) => {
 	}
 });
 
-
-
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
-
 
 //   const observer = new IntersectionObserver(
 //     (entries) => {
 //       entries.forEach((entry) => {
 
-
 //         if (entry.isIntersecting) {
 
 //           // Eliminar la clase activa de todos
 //           navLinks.forEach((link) => {
-// 			link.classList.remove("active-section") 
+// 			link.classList.remove("active-section")
 // 			link.classList.remove("active-sectio-mobile")
 // 		  }
 
@@ -536,7 +623,7 @@ const navLinks = document.querySelectorAll(".nav-link");
 
 //           // Agregar la clase activa al enlace correspondiente
 //           const activeLink = document.querySelectorAll(`.nav-link[href="#${entry.target.id}"]`);
-// 		  activeLink.forEach((link,index) => {			
+// 		  activeLink.forEach((link,index) => {
 // 			if (link) link.classList.add("active-section");
 // 			if (index === 1) link.classList.add("active-section-mobile");
 // 		  });
@@ -544,46 +631,26 @@ const navLinks = document.querySelectorAll(".nav-link");
 //         }
 //       });
 //     },
-//     {  
+//     {
 // 		// rootMargin: "-40% 0px -40% 0px", // Define el margen superior e inferior para centrar
-// 		threshold: 0.7 // Se activa cuando el 60% de la sección es visible 
-// 	} 
+// 		threshold: 0.7 // Se activa cuando el 60% de la sección es visible
+// 	}
 //   );
 
 //   sections.forEach((section) => observer.observe(section));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
-	document.querySelectorAll('.toggle-panel').forEach((el) => {
-		el.addEventListener('click', function (event) {
+	document.querySelectorAll(".toggle-panel").forEach((el) => {
+		el.addEventListener("click", function (event) {
 			// Si se hace clic en un hijo, closest() obtiene el contenedor .toggle-panel
 			const togglePanel = event.target.closest(".toggle-panel");
 			const contentPanel = togglePanel.nextElementSibling;
 			const parent = togglePanel.parentElement;
 
-			if (contentPanel.style.maxHeight && contentPanel.style.maxHeight !== "0px") {
+			if (
+				contentPanel.style.maxHeight &&
+				contentPanel.style.maxHeight !== "0px"
+			) {
 				// Colapsar: reiniciamos el max-height y eliminamos los paddings verticales
 				contentPanel.style.maxHeight = "0px";
 				contentPanel.style.paddingTop = "0";
@@ -598,18 +665,11 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	});
-
-
-
 });
 
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
 	// Seleccionamos todos los enlaces del menú
-	const navLinks = document.querySelectorAll('.nav-link');
+	const navLinks = document.querySelectorAll(".nav-link");
 
 	// Función que se ejecuta en cada evento de scroll
 	function onScroll() {
@@ -617,9 +677,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		const scrollPos = window.scrollY || document.documentElement.scrollTop;
 
-		navLinks.forEach(link => {
+		navLinks.forEach((link) => {
 			// Obtenemos la sección que coincide con el href del enlace
-			const section = document.querySelector(link.getAttribute('href'));
+			const section = document.querySelector(link.getAttribute("href"));
 
 			if (section) {
 				const sectionTop = section.offsetTop;
@@ -627,21 +687,23 @@ document.addEventListener('DOMContentLoaded', () => {
 				const sectionHeight = section.offsetHeight;
 
 				// Ajusta el valor del offset (por ejemplo, 150) según tus necesidades
-				if (scrollPos >= (sectionTop - 450) && scrollPos < (sectionTop + sectionHeight - 450)) {
-					link.classList.add('active-section');
+				if (
+					scrollPos >= sectionTop - 450 &&
+					scrollPos < sectionTop + sectionHeight - 450
+				) {
+					link.classList.add("active-section");
 				} else {
-					link.classList.remove('active-section');
+					link.classList.remove("active-section");
 				}
 			}
 		});
 	}
 
 	// Escuchamos el evento scroll
-	window.addEventListener('scroll', onScroll);
+	window.addEventListener("scroll", onScroll);
 	// Ejecutamos una vez al cargar la página
 	onScroll();
 });
-
 
 //menu burger
 const menuToggle = document.getElementById("burger");
@@ -656,20 +718,23 @@ menuToggle.addEventListener("click", () => {
 	mobileMenu.classList.toggle("pointer-events-none");
 });
 
-
-
-
-
-
-
-
+// Cerrar menú móvil al hacer click en una opción
+mobileMenu.querySelectorAll("a").forEach((link) => {
+	link.addEventListener("click", () => {
+		menuToggle.checked = false;
+		header.classList.remove("backdrop-blur-lg");
+		mobileMenu.classList.remove("opacity-100");
+		mobileMenu.classList.remove("pointer-events-auto");
+		mobileMenu.classList.add("opacity-0");
+		mobileMenu.classList.add("pointer-events-none");
+	});
+});
 
 // Asegurar que el código solo se ejecute en el cliente
 if (typeof window !== "undefined") {
 	gsap.registerPlugin(ScrollTrigger);
 
 	document.addEventListener("DOMContentLoaded", () => {
-
 		// Fade-in desde la opacidad 0
 		const fadeInElements = document.querySelectorAll(".fade-in");
 		fadeInElements.forEach((el) => {
@@ -684,8 +749,6 @@ if (typeof window !== "undefined") {
 				},
 			});
 		});
-
-
 
 		// Zoom-in
 		const zoomInElements = document.querySelectorAll(".zoom-in");
@@ -702,7 +765,6 @@ if (typeof window !== "undefined") {
 			});
 		});
 
-
 		// Efecto Parallax
 		const parallaxElements = document.querySelectorAll(".parallax");
 		parallaxElements.forEach((el) => {
@@ -717,24 +779,22 @@ if (typeof window !== "undefined") {
 				},
 			});
 		});
-
 	});
 }
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
 	const elements = document.querySelectorAll("[data-animate]");
 
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				entry.target.classList.add("visible");
-			}
-		});
-	}, { threshold: 0.2 });
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("visible");
+				}
+			});
+		},
+		{ threshold: 0.2 },
+	);
 
 	elements.forEach((el) => observer.observe(el));
 });
