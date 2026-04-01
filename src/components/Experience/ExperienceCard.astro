@@ -21,7 +21,7 @@ const textsArray = Array.isArray(texts) ? texts : [];
 				<img
 					class="max-w-[5rem] md:max-w-[4rem] lg:max-w-[5rem] xl:max-w-[7rem] object-contain w-full h-full"
 					src={img}
-					alt="Logo 1"
+					alt={`Logo de ${company}`}
 				/>
 			</div>
 
@@ -45,9 +45,9 @@ const textsArray = Array.isArray(texts) ? texts : [];
 			</p>
 			<div
 				class="flex flex-row items-center lg:justify-end gap-1 w-full flex-wrap">
-				<SkillCard alt="Github logo" title={`${jobInfoArray[0]}`} />
-				<SkillCard alt="Github logo" title={`${jobInfoArray[1]}`} />
-				<SkillCard alt="Github logo" title={`${jobInfoArray[2]}`} />
+				<SkillCard alt="Ubicación" title={`${jobInfoArray[0]}`} />
+				<SkillCard alt="Modalidad" title={`${jobInfoArray[1]}`} />
+				<SkillCard alt="Tipo de jornada" title={`${jobInfoArray[2]}`} />
 			</div>
 		</div>
 	</div>

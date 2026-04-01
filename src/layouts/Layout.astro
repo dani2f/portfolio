@@ -88,10 +88,44 @@ import SpeedInsights from "@vercel/speed-insights/astro";
 			content="Desarrollador con pasión por construir y seguir creciendo en el mundo del desarrollo web."
 		/>
 		<!-- Imagen que aparecerá en la tarjeta de Twitter -->
-		<meta name="twitter:image" content="/img/logos/logoDaniel.svg" />
+		<meta name="twitter:image" content="/img/logos/logoDanielRedes.svg" />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://danielgomezfullstack.vercel.app" />
+
+		<!-- Open Graph Locale -->
+		<meta property="og:locale" content="es_ES" />
+		<meta property="og:site_name" content="Daniel Gómez - Portfolio" />
 
 		<!-- Indica que la página fue generada usando Astro -->
 		<meta name="generator" content="Astro" />
+
+		<!-- Schema.org JSON-LD -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Daniel Gómez",
+			"url": "https://danielgomezfullstack.vercel.app",
+			"jobTitle": "Desarrollador Full Stack",
+			"worksFor": {
+				"@type": "Organization",
+				"name": "Codigosa"
+			},
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Bilbao",
+				"addressRegion": "Bizkaia",
+				"addressCountry": "ES"
+			},
+			"knowsAbout": ["JavaScript", "Angular", "PHP", "TypeScript", "Python", "Django", "Astro", "React", "Tailwind CSS", "Laravel"],
+			"email": "daniprgm@gmail.com",
+			"sameAs": [
+				"https://github.com/dani2f",
+				"https://www.linkedin.com/in/daniel-gomez-cuevas/"
+			]
+		}
+		</script>
 
 		<!-- Título que se muestra en la pestaña del navegador -->
 		<title>Daniel Gómez - Desarrollador Full Stack</title>
